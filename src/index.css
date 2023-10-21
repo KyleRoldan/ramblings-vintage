@@ -1,0 +1,15 @@
+body{
+
+    background-color: rgba(255, 254, 242, 1);
+}
+
+button {
+    width: 123px;
+    background-color:  rgba(250, 78, 18, 1);
+    color:rgba(255, 254, 242, 1);
+    border:none;
+    border-radius: 25px;
+    padding:5px
+    
+    
+    }

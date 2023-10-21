@@ -5,16 +5,17 @@ import { createUser, getUserByEmail } from "../../services/UserService"
 
 export const Register = (props) => {
   const [user, setUser] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    cohort: 0,
+    isAdmin: false
+    
   })
   let navigate = useNavigate()
 
   const registerNewUser = () => {
     const newUser = {
       ...user,
-      cohort: parseInt(user.cohort),
+     
     }
 
     createUser(newUser).then((createdUser) => {
@@ -52,13 +53,18 @@ export const Register = (props) => {
   }
 
   return (
-    <main className="auth-container">
-      <form className="auth-form" onSubmit={handleRegister}>
-        <h1 className="header">Learning Moments</h1>
-        <h2>Please Register</h2>
-        <fieldset className="auth-fieldset">
-          <div>
-            <input
+  
+  
+  <div className="auth-container">
+
+  <div className="log-in-text">Join</div>
+  
+  <div className= "secondary-conatiner">
+    <form className="auth-form" onSubmit={handleRegister}>
+      
+      <div className="auth-box">
+        <div className="auth-fieldset">
+        <input
               onChange={updateUser}
               type="text"
               id="fullName"
@@ -67,11 +73,12 @@ export const Register = (props) => {
               required
               autoFocus
             />
-          </div>
-        </fieldset>
-        <fieldset className="auth-fieldset">
-          <div>
-            <input
+        </div>
+      </div>
+       
+       <div className="auth-fieldset">
+        <div>
+        <input
               onChange={updateUser}
               type="email"
               id="email"
@@ -79,26 +86,65 @@ export const Register = (props) => {
               placeholder="Email address"
               required
             />
-          </div>
-        </fieldset>
-        <fieldset className="auth-fieldset">
-          <div>
-            <input
-              onChange={updateUser}
-              type="number"
-              id="cohort"
-              className="auth-form-input"
-              placeholder="Cohort #"
-              required
-            />
-          </div>
-        </fieldset>
-        <fieldset className="auth-fieldset">
-          <div>
-            <button type="submit">Register</button>
-          </div>
-        </fieldset>
-      </form>
-    </main>
-  )
+        </div>
+      </div>
+      <div className="newUser-box"></div>
+
+      <div className="register-link">
+        <button type="submit">Register</button>
+     </div>
+
+
+
+
+    </form>
+  </div>
+  
+
+
+</div>
+
+
+
+
+//     <main className="auth-container">
+//       <form className="auth-form" onSubmit={handleRegister}>
+        
+//        <div><h2>join</h2></div> 
+//         <fieldset className="auth-fieldset">
+//           <div>
+//             <input
+//               onChange={updateUser}
+//               type="text"
+//               id="fullName"
+//               className="auth-form-input"
+//               placeholder="Enter your name"
+//               required
+//               autoFocus
+//             />
+//           </div>
+//         </fieldset>
+//         <fieldset className="auth-fieldset">
+//           <div>
+//             <input
+//               onChange={updateUser}
+//               type="email"
+//               id="email"
+//               className="auth-form-input"
+//               placeholder="Email address"
+//               required
+//             />
+//           </div>
+//         </fieldset>
+
+//         <fieldset className="auth-fieldset">
+//           <div>
+//             <button type="submit">Register</button>
+//           </div>
+//         </fieldset>
+//       </form>
+//     </main>
+
+
+)
 }

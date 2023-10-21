@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import navIconImage from "../../assets/menu_icon.png"
 import navLogoImage from "../../assets/ramblingsvintagelogo.png"
 import "./NavBar.css"
-import { Link, useNavigate, } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom'
+import { getAllUsers } from '../../services/FetchCalls'
 
 
 
-export const NavBar = () => {
+
+
+export const NavBar = ({currentUser}) => {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [allUsers, setAllUsers] = useState([]);
+  
+  useEffect(() => {
+    getAllUsers().then((usersArray) => {
+      setAllUsers(usersArray);
+    });
+  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -22,6 +32,12 @@ export const NavBar = () => {
     setIsDropdownOpen(false);
   };
 
+  const userEmail = allUsers
+  .filter((user) => user.id === currentUser.id)
+  .map((user )=> user.fullName)
+
+  console.log(userEmail)
+
   return (
     <div className="navbar">
         
@@ -29,7 +45,7 @@ export const NavBar = () => {
             <div className="userProfilePic-box">
                 <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/>
             </div>
-        <div className="userBox"> userprofile@gmail.com </div>
+        <div className="userBox"> {userEmail} </div>
        </div>
        
        <div className="logoBox">

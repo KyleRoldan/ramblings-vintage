@@ -1,73 +1,117 @@
 {
-    "User": [
-      {
-        "id": 1,
-        "email": "user1@example.com",
-        "isAdmin": true
-      },
-      {
-        "id": 2,
-        "email": "user2@example.com",
-        "isAdmin": false
-      }
-    ],
-    "Item": [
-      {
-        "id": 1,
-        "title": "Item 1",
-        "category": "Category 1",
-        "price": "$10.00",
-        "image": ["image1.jpg", "image2.jpg"],
-        "eBayLink": "https://www.ebay.com/item1",
-        "etsyLink": "https://www.etsy.com/item1"
-      },
-      {
-        "id": 2,
-        "title": "Item 2",
-        "category": "Category 2",
-        "price": "$15.00",
-        "image": ["image3.jpg", "image4.jpg"],
-        "eBayLink": "https://www.ebay.com/item2",
-        "etsyLink": "https://www.etsy.com/item2"
-      }
-    ],
-    "Favorite": [
-      {
-        "id": 1,
-        "itemId": 1,
-        "userId": 1
-      },
-      {
-        "id": 2,
-        "itemId": 2,
-        "userId": 1
-      }
-    ],
-    "User_List_Item": [
-      {
-        "id": 1,
-        "name": "List 1",
-        "description": "Description for List 1",
-        "userId": 1
-      },
-      {
-        "id": 2,
-        "name": "List 2",
-        "description": "Description for List 2",
-        "userId": 2
-      }
-    ],
-    "List_Item": [
-      {
-        "id": 1,
-        "itemId": 1,
-        "listId": 1
-      },
-      {
-        "id": 2,
-        "itemId": 2,
-        "listId": 1
-      }
-    ]
-  }
-  
+  "User": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "isAdmin": false
+    },
+    {
+      "name": "",
+      "email": "kyle.alexander.roldan@gmail.com",
+      "fullName": "Kyle Roldan",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "honeyraeswan@gmail.com",
+      "isAdmin": false,
+      "fullName": "honey rae swan",
+      "id": 4
+    },
+    {
+      "fullName": "buthead",
+      "email": "mcgoo@aol.com",
+      "isAdmin": false,
+      "id": 5
+    },
+    {
+      "fullName": "noway",
+      "email": "thisworked@gmail.com",
+      "isAdmin": false,
+      "image": null,
+      "id": 6
+    },
+    {
+      "fullName": "ddd",
+      "email": "ddd@gmail.com",
+      "isAdmin": false,
+      "image": null,
+      "id": 7
+    },
+    {
+      "fullName": "Honey-Rae Swan-Roldan",
+      "email": "honey-raeswan-roldan@gmail.com",
+      "isAdmin": false,
+      "id": 8
+    }
+  ],
+  "Item": [
+    {
+      "id": 1,
+      "title": "Item 1",
+      "category": "Category 1",
+      "price": "$10.00",
+      "image": [
+        "image1.jpg",
+        "image2.jpg"
+      ],
+      "eBayLink": "https://www.ebay.com/item1",
+      "etsyLink": "https://www.etsy.com/item1"
+    },
+    {
+      "id": 2,
+      "title": "Item 2",
+      "category": "Category 2",
+      "price": "$15.00",
+      "image": [
+        "image3.jpg",
+        "image4.jpg"
+      ],
+      "eBayLink": "https://www.ebay.com/item2",
+      "etsyLink": "https://www.etsy.com/item2"
+    }
+  ],
+  "Favorite": [
+    {
+      "id": 1,
+      "itemId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "itemId": 2,
+      "userId": 1
+    }
+  ],
+  "User_List_Item": [
+    {
+      "id": 1,
+      "name": "List 1",
+      "description": "Description for List 1",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "List 2",
+      "description": "Description for List 2",
+      "userId": 2
+    }
+  ],
+  "List_Item": [
+    {
+      "id": 1,
+      "itemId": 1,
+      "listId": 1
+    },
+    {
+      "id": 2,
+      "itemId": 2,
+      "listId": 1
+    }
+  ]
+}

@@ -29,13 +29,15 @@ export const Login = () => {
   }
 
   return (
-    <main className="auth-container">
-      <section>
+    <div className="auth-container">
+
+      <div className="log-in-text">Log-in</div>
+      
+      <div className= "secondary-conatiner">
         <form className="auth-form" onSubmit={handleLogin}>
-          <h1 className="header">Learning Moments</h1>
-          <h2>Please sign in</h2>
-          <fieldset className="auth-fieldset">
-            <div>
+          
+          <div className="auth-box">
+            <div className="auth-fieldset">
               <input
                 type="email"
                 value={email}
@@ -46,18 +48,23 @@ export const Login = () => {
                 autoFocus
               />
             </div>
-          </fieldset>
-          <fieldset className="auth-fieldset">
+          </div>
+           
+           <div className="auth-fieldset">
             <div>
               <button type="submit">Sign in</button>
             </div>
-          </fieldset>
+          </div>
+        
         </form>
-      </section>
-      <section className="register-link">
-        <Link to="/register">Not a member yet?</Link>
-      </section>
-    </main>
+      </div>
+      <div className="newUser-box">New user?</div>
+      
+      <div className="register-link">
+        <Link to="/register"><button type="submit">Join</button></Link>
+      </div>
+
+    </div>
   )
 }
 
