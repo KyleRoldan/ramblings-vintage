@@ -1,0 +1,8 @@
+.body {
+    background-image: url('../../assets/vinylbackground.jpg'); /* Adjust the path as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1400px;
+    height:700px;
+  }
+  

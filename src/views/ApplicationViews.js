@@ -8,7 +8,7 @@ import { AllLists } from "../components/posts/AllLists"
 import { EditItem } from "../components/posts/EditItem"
 import { EditList } from "../components/posts/EditList"
 import { Favorites } from "../components/posts/Favorites"
-import { Itemdetails } from "../components/posts/Itemdetails"
+import { ItemDetails } from "../components/posts/Itemdetails"
 import { ListDetails } from "../components/posts/ListDetails"
 
 
@@ -38,7 +38,7 @@ element={
 >
 <Route index element={<Welcome />} />
 <Route path ="items" index element={<AllItems currentUser={currentUser} />} />
-<Route path="items/:itemId" element={<Itemdetails currentUser={currentUser} />} />
+<Route path="/items/:itemId" element={<ItemDetails currentUser={currentUser} />} />
 <Route path="favorites" element={<Favorites currentUser={currentUser} />} />
 <Route path ="lists" index element={<AllLists currentUser={currentUser}/>} />
 

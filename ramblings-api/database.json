@@ -1,61 +1,25 @@
 {
-  "User": [
-    {
-      "id": 1,
-      "email": "user1@example.com",
-      "isAdmin": true
-    },
-    {
-      "id": 2,
-      "email": "user2@example.com",
-      "isAdmin": false
-    },
-    {
-      "name": "",
-      "email": "kyle.alexander.roldan@gmail.com",
-      "fullName": "Kyle Roldan",
-      "id": 3
-    },
-    {
-      "name": "",
-      "email": "honeyraeswan@gmail.com",
-      "isAdmin": false,
-      "fullName": "honey rae swan",
-      "id": 4
-    },
+  "user": [
     {
       "fullName": "buthead",
       "email": "mcgoo@aol.com",
-      "isAdmin": false,
-      "id": 5
-    },
-    {
-      "fullName": "noway",
-      "email": "thisworked@gmail.com",
-      "isAdmin": false,
-      "image": null,
-      "id": 6
-    },
-    {
-      "fullName": "ddd",
-      "email": "ddd@gmail.com",
-      "isAdmin": false,
-      "image": null,
-      "id": 7
+      "isAdmin": true,
+      "id": 1
     },
     {
       "fullName": "Honey-Rae Swan-Roldan",
       "email": "honey-raeswan-roldan@gmail.com",
       "isAdmin": false,
-      "id": 8
+      "id": 4
     }
   ],
-  "Item": [
+  "item": [
     {
       "id": 1,
-      "title": "Item 1",
-      "category": "Category 1",
-      "price": "$10.00",
+      "title": "1990s Single Stitch T-Shirt",
+      "description": " A Vintage T-shirt size L",
+      "price": "$30.00",
+      "categoryId": 1,
       "image": [
         "image1.jpg",
         "image2.jpg"
@@ -65,9 +29,10 @@
     },
     {
       "id": 2,
-      "title": "Item 2",
-      "category": "Category 2",
-      "price": "$15.00",
+      "title": "1970s Levis 501",
+      "description": " Straight Leg sz 32",
+      "price": "$75.00",
+      "categoryId": 2,
       "image": [
         "image3.jpg",
         "image4.jpg"
@@ -76,7 +41,61 @@
       "etsyLink": "https://www.etsy.com/item2"
     }
   ],
-  "Favorite": [
+  "category": [
+    {
+      "id": 1,
+      "name": "T-Shirts"
+    },
+    {
+      "id": 2,
+      "name": "Denim"
+    },
+    {
+      "id": 3,
+      "name": "Pants"
+    },
+    {
+      "id": 4,
+      "name": "Shorts"
+    },
+    {
+      "id": 5,
+      "name": "Skirts"
+    },
+    {
+      "id": 6,
+      "name": "Jackets"
+    },
+    {
+      "id": 7,
+      "name": "L/S Shirts"
+    },
+    {
+      "id": 8,
+      "name": "Button Shirts"
+    },
+    {
+      "id": 9,
+      "name": "Sweaters"
+    },
+    {
+      "id": 10,
+      "name": "Dresses"
+    },
+    {
+      "id": 11,
+      "name": "Tops"
+    },
+    {
+      "id": 12,
+      "name": "Overalls"
+    },
+    {
+      "id": 13,
+      "name": "Accessories"
+    }
+  ],
+  "favorite": [
     {
       "id": 1,
       "itemId": 1,
@@ -86,9 +105,29 @@
       "id": 2,
       "itemId": 2,
       "userId": 1
+    },
+    {
+      "itemId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "itemId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "itemId": 1,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "itemId": 1,
+      "userId": 1,
+      "id": 6
     }
   ],
-  "User_List_Item": [
+  "user_list_item": [
     {
       "id": 1,
       "name": "List 1",
@@ -102,7 +141,7 @@
       "userId": 2
     }
   ],
-  "List_Item": [
+  "list_item": [
     {
       "id": 1,
       "itemId": 1,

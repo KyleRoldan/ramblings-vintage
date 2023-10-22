@@ -76,8 +76,8 @@ export const Register = (props) => {
         </div>
       </div>
        
-       <div className="auth-fieldset">
-        <div>
+       <div className="auth-box">
+        <div className="auth-fieldset">
         <input
               onChange={updateUser}
               type="email"
@@ -91,7 +91,7 @@ export const Register = (props) => {
       <div className="newUser-box"></div>
 
       <div className="register-link">
-        <button type="submit">Register</button>
+        <button class="classic-button" type="submit">Register</button>
      </div>
 
 

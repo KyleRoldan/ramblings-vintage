@@ -1,0 +1,25 @@
+.imageBox{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 0 22px 0 30px;
+   
+}
+
+.image_Display{
+    width:448px; 
+    margin: 48px 8px 24px 0;
+}  
+
+.item-details-info-box{
+    padding: 0 22px 0 30px;
+}
+
+.item-description{
+    padding-bottom: 100px;
+}
+
+.opaque-text{
+    opacity: 50%;
+}
+

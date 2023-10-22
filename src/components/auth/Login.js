@@ -52,7 +52,7 @@ export const Login = () => {
            
            <div className="auth-fieldset">
             <div>
-              <button type="submit">Sign in</button>
+              <button class="classic-button" type="submit">Sign In</button>
             </div>
           </div>
         
@@ -61,7 +61,7 @@ export const Login = () => {
       <div className="newUser-box">New user?</div>
       
       <div className="register-link">
-        <Link to="/register"><button type="submit">Join</button></Link>
+        <Link to="/register"><button class="classic-button" type="submit">Join Now</button></Link>
       </div>
 
     </div>

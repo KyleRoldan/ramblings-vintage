@@ -1,0 +1,35 @@
+.item_body{
+display: flex;
+border: solid 2px black;
+margin: 0px 5px 0px 5px;
+
+}
+
+.item_card{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    border: dotted 2px black;
+    width: 300px;
+
+}
+
+.image_box{
+    border: dotted 2px black;
+    width: 100px;
+    overflow: hidden;
+    width: fit-content;
+    
+   
+
+
+    
+}
+.image_box img {
+    max-width:100% ;
+   
+
+}
+
+
+
