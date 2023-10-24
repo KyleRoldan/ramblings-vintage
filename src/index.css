@@ -28,3 +28,8 @@ button{
     color:rgba(255, 254, 242, 1);
     border: 1px solid rgba(250, 78, 18, 1);
       }
+
+.link_styling{
+    text-decoration: none;
+    color: #fffef2;
+}

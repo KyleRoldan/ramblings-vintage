@@ -10,6 +10,10 @@ import { EditList } from "../components/posts/EditList"
 import { Favorites } from "../components/posts/Favorites"
 import { ItemDetails } from "../components/posts/Itemdetails"
 import { ListDetails } from "../components/posts/ListDetails"
+import { AdminViews } from "./AdminViews"
+import { UserView } from "./UserView"
+
+
 
 
 
@@ -24,35 +28,11 @@ useEffect(() => {
   const learningUserObject = JSON.parse(localLearningUser)
   setCurrentUser(learningUserObject)
 }, [])
-    return (<>
-
-    <Routes>
-  <Route path="/"
-
-element={
-<>
-<NavBar currentUser={currentUser}/>
-<Outlet />
-</>
-}
->
-<Route index element={<Welcome />} />
-<Route path ="items" index element={<AllItems currentUser={currentUser} />} />
-<Route path="/items/:itemId" element={<ItemDetails currentUser={currentUser} />} />
-<Route path="favorites" element={<Favorites currentUser={currentUser} />} />
-<Route path ="lists" index element={<AllLists currentUser={currentUser}/>} />
 
 
 
 
-</Route>
-  </Routes>
 
 
-
-    
-
-    
-  </>
-    )
+    return currentUser.isAdmin ? (<AdminViews currentUser={currentUser}/>) : (<UserView currentUser={currentUser}/>)
 }

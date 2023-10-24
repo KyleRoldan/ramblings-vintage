@@ -17,7 +17,10 @@ export const Login = () => {
         localStorage.setItem(
           "ramblings_user",
           JSON.stringify({
-            id: user.id,
+            fullName: user.fullName,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            id: user.id
           })
         )
 

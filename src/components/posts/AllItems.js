@@ -9,10 +9,10 @@ export const AllItems = ({ currentUser }) => {
     const [allItems, setAllItems] = useState([])
     const [allFavorites, setAllFavorites] = useState([])
     const [allCategories, setAllCategories] = useState([])
-    const [categoryForItem, setCategoryForItem] = useState([])
+    const [categoryForItem, setCategoryForItem] = useState({})
     const [searchTerm, setSearchTerm] = useState("")
     const [filteredItems, setFilteredItems] = useState([])
-    const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState(0);
 
 
     useEffect(() => {
@@ -58,31 +58,37 @@ export const AllItems = ({ currentUser }) => {
 
     useEffect(() => {
         const foundItems = allItems.filter((item) => {
-            // Check if the selectedCategory is empty or matches the item's category
-            return (
-                selectedCategory === "" || selectedCategory === item.categoryId
-            );
+            // Check if no category is chosen or "Select" is chosen
+            if (isNaN(selectedCategory) || selectedCategory === "All" || selectedCategory === 0) {
+                // Show all items
+                return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+            }
+
+            // Check if the selectedCategory matches the item's category
+            if (selectedCategory === item.categoryId) {
+                // Check if the item's title includes the search term (case-insensitive)
+                return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+            }
+
+            return false; // Filter out items that don't match the criteria.
         });
+
+        // Set the filtered items after filtering is complete.
         setFilteredItems(foundItems);
-    }, [selectedCategory, allItems]);
-
-
+    }, [selectedCategory, searchTerm, allItems]);
 
 
 
     /////////////////////////////////////////////////////////////////
-
-
-
 
     return <>
 
 
         <select
             value={selectedCategory}
-            onChange={(event) => setSelectedCategory(event.target.value)}
+            onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
         >
-            <option value="">Select</option>
+            <option value="All">All</option>
             {allCategories.map((itemOption) => (
                 <option key={itemOption.id} value={itemOption.id}>
                     {itemOption.name}
@@ -97,20 +103,54 @@ export const AllItems = ({ currentUser }) => {
             className="title-search"
         />
 
-        <div className="item_body">
+
+
+
+
+
+        <div className="image-container_whole">
+            {filteredItems.map((item) => (
+
+                <div className="image-container" key={item.id}>
+                    <img src="https://i.etsystatic.com/16189360/r/il/c3a1f6/4888038292/il_fullxfull.4888038292_huqe.jpg" alt="jacket" />
+                    <div className="overlay">
+                        <Link className="link_styling" to={`/items/${item.id}`}>{item.title}</Link>
+                        <div>{item.price}</div>
+                    </div>
+
+
+
+                    <h1><div className="item_card_price"> {item.price}</div></h1>
+
+
+                </div>
+
+            ))}
+        </div>
+
+{/* ////////////ItEM CARD STYLED IN RELATION TO CAPSTONE WIREFRAM//////////////////////////////*/}
+
+        {/* <div className="item_body">
 
             {filteredItems.map((item) => (
                 <div className="item_card" key={item.id}>
-                    <div className="image_box">
-                        <img src={testImg} alt="item detail" className="image_Display" />
+                    <div className="image_boxCard">
+                        <img src={testImg} alt="item detail" className="image_DisplayCard" />
                     </div>
-                    <Link to={`/items/${item.id}`}>{item.title}</Link>
-                    - Category: {categoryForItem[item.id]?.map(category => category.name)}
+
+                    <div className="item_card_info">
+                        <h3><Link to={`/items/${item.id}`}>{item.title}</Link></h3>
+                        {categoryForItem[item.id]?.map(category => category.name)}
+                    </div>
+
+                    <h1><div className="item_card_price"> {item.price}</div></h1>
+
+
                 </div>
-            ))}
+            ))} */}
 
 
-        </div>
+
     </>
 }
 

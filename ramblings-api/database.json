@@ -125,6 +125,16 @@
       "itemId": 1,
       "userId": 1,
       "id": 6
+    },
+    {
+      "itemId": 2,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "itemId": 2,
+      "userId": 1,
+      "id": 8
     }
   ],
   "user_list_item": [
