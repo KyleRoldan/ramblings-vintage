@@ -15,30 +15,48 @@
   ],
   "item": [
     {
-      "id": 1,
-      "title": "1990s Single Stitch T-Shirt",
-      "description": " A Vintage T-shirt size L",
-      "price": "$30.00",
-      "categoryId": 1,
-      "image": [
-        "image1.jpg",
-        "image2.jpg"
-      ],
-      "eBayLink": "https://www.ebay.com/item1",
-      "etsyLink": "https://www.etsy.com/item1"
+      "id":1,
+      "categoryId":3,
+      "title": "Vintage 90s High Waisted White Denim Pants sz 12 NWT",
+      "description": "Please message if you have any questions regarding size or condition.",
+      "measurements": {
+        "pit to pit": "14 in",
+        "inseam": "30.5 in"
+      },
+      "price": 35,
+      "currency": "USD",
+      "quantity": 1,
+      "images": [
+        "https://i.etsystatic.com/16189360/r/il/e52947/4874416380/il_fullxfull.4874416380_lk1l.jpg",
+        "https://i.etsystatic.com/16189360/r/il/f060ee/4922680389/il_fullxfull.4922680389_s00y.jpg",
+        "https://i.etsystatic.com/16189360/r/il/ca90e6/4922680749/il_fullxfull.4922680749_dmw7.jpg",
+        "https://i.etsystatic.com/16189360/r/il/dba785/4874417276/il_fullxfull.4874417276_4hk9.jpg",
+        "https://i.etsystatic.com/16189360/r/il/479ef7/4922681379/il_fullxfull.4922681379_6sp3.jpg",
+        "https://i.etsystatic.com/16189360/r/il/0a2cdc/4874417686/il_fullxfull.4874417686_m2g7.jpg",
+        "https://i.etsystatic.com/16189360/r/il/0782f4/4922681809/il_fullxfull.4922681809_oje5.jpg",
+        "https://i.etsystatic.com/16189360/r/il/9b8a48/4922681969/il_fullxfull.4922681969_bbk1.jpg"
+      ]
     },
     {
-      "id": 2,
-      "title": "1970s Levis 501",
-      "description": " Straight Leg sz 32",
-      "price": "$75.00",
-      "categoryId": 2,
-      "image": [
-        "image3.jpg",
-        "image4.jpg"
-      ],
-      "eBayLink": "https://www.ebay.com/item2",
-      "etsyLink": "https://www.etsy.com/item2"
+      "id":2,
+      "categoryId":10,
+      "title": "Vintage 70s JC Penny Patchwork dress sz L",
+      "description": "Please message if you have any questions regarding size or condition.",
+      "measurements": {
+        "pit to pit": "19.5 in",
+        "pit to hem": "12 in",
+        "front": "37 in"
+      },
+      "price": 175,
+      "currency": "USD",
+      "quantity": 1,
+      "images": [
+        "https://i.etsystatic.com/16189360/r/il/a5c9ee/4922433299/il_fullxfull.4922433299_rtrr.jpg",
+        "https://i.etsystatic.com/16189360/r/il/b73e71/4874169416/il_fullxfull.4874169416_nd0v.jpg",
+        "https://i.etsystatic.com/16189360/r/il/75536e/4922434221/il_fullxfull.4922434221_qoor.jpg",
+        "https://i.etsystatic.com/16189360/r/il/d1c039/4922434505/il_fullxfull.4922434505_kh68.jpg",
+        "https://i.etsystatic.com/16189360/r/il/d87d25/4874170948/il_fullxfull.4874170948_5o1t.jpg"
+      ]
     }
   ],
   "category": [

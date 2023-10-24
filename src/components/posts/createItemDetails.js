@@ -78,37 +78,61 @@ useEffect(() => {
   
   
   
-  return (
+  return (<>
    
     <div className="post-details">
-
-        <div className="imageBox">
-
-        <img src={testImg} alt = "item detail" className="image_Display"/>
-        <img src={testImg} alt = "item detail" className="image_Display"/>
-        <img src={testImg} alt = "item detail" className="image_Display"/>
+{allItems.map((item) => (
 
 
+        <><div className="imageBox">
+        <img src={item.images[1]} alt="item detail" className="image_Display" />
+        <img src={item.images[2]} alt="item detail" className="image_Display" />
+        <img src={item.images[3]} alt="item detail" className="image_Display" />
+    </div><div className="item-details-info-box">
+            {/* <p>Owner:{itemCreator}</p> */}
 
-        </div>
-        <div className="item-details-info-box">
-    {/* <p>Owner:{itemCreator}</p> */}
-        
-    <h2>{item.price}</h2>
-      <h1>{item.title}</h1>
-      
-      <p className="opaque-text"> {itemCategory}</p>
+            <h2>{item.price}</h2>
+            <h1>{item.title}</h1>
 
-      <p className="item-description">{item.description}</p>
-      
-      
-      {/* Display the like button only if the user is not the author and has not already liked the post */}
-      {item.userId !== currentUser.id && !isfavorited && (
-        <button onClick={handleLike}>Like</button>
-      )}
-       {favoriteCount[item.id] || 0}
-      {/* {item.userId === currentUser.id && <button>Edit</button>} */}
-        </div>
-    </div>
-  );
+            <p className="opaque-text"> {itemCategory}</p>
+
+            <p className="item-description">{item.description}</p>
+
+
+            {/* Display the like button only if the user is not the author and has not already liked the post */}
+            {item.userId !== currentUser.id && !isfavorited && (
+                <button onClick={handleLike}>Like</button>
+            )}
+            {favoriteCount[item.id] || 0}
+            {/* {item.userId === currentUser.id && <button>Edit</button>} */}
+        </div></>
+   
+ 
+))}
+ </div>
+</>
+);
 };
+
+
+
+
+
+
+{/* {filteredItems.map((item) => (
+
+    <div className="image-container" key={item.id}>
+        <img src={item.images[0]}alt="jacket" />
+        <div className="overlay">
+            <Link className="link_styling" to={`/items/${item.id}`}>{item.title}</Link>
+            <div>{item.price}</div>
+        </div>
+
+
+
+        <h1><div className="item_card_price"> {item.price}</div></h1>
+
+
+    </div>
+
+))} */}

@@ -112,7 +112,7 @@ export const AllItems = ({ currentUser }) => {
             {filteredItems.map((item) => (
 
                 <div className="image-container" key={item.id}>
-                    <img src="https://i.etsystatic.com/16189360/r/il/c3a1f6/4888038292/il_fullxfull.4888038292_huqe.jpg" alt="jacket" />
+                    <img src={item.images[0]}alt="jacket" />
                     <div className="overlay">
                         <Link className="link_styling" to={`/items/${item.id}`}>{item.title}</Link>
                         <div>{item.price}</div>
