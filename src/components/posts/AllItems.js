@@ -54,20 +54,22 @@ export const AllItems = ({ currentUser }) => {
     /////////////////////////////////////////////////////////////////
 
     /////////////////Search Features/////////////////////////////////
-
+console.log(allItems)
 
     useEffect(() => {
         const foundItems = allItems.filter((item) => {
             // Check if no category is chosen or "Select" is chosen
             if (isNaN(selectedCategory) || selectedCategory === "All" || selectedCategory === 0) {
                 // Show all items
-                return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+                return item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase());
+            
             }
 
             // Check if the selectedCategory matches the item's category
             if (selectedCategory === item.categoryId) {
                 // Check if the item's title includes the search term (case-insensitive)
-                return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+                return item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase());
+        
             }
 
             return false; // Filter out items that don't match the criteria.
@@ -120,7 +122,7 @@ export const AllItems = ({ currentUser }) => {
 
 
 
-                    <h1><div className="item_card_price"> {item.price}</div></h1>
+                   
 
 
                 </div>

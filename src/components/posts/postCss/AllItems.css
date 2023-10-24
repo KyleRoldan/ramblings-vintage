@@ -5,6 +5,7 @@
 .image-container_whole{
 
 display: flex;
+flex-wrap: wrap;
 
 padding: 50px;
 
