@@ -6,6 +6,7 @@
 
 display: flex;
 flex-wrap: wrap;
+margin-left: 50px;
 
 padding: 50px;
 
@@ -13,7 +14,8 @@ padding: 50px;
 
 .image-container {
     display:flex;
-    margin:4px;
+   
+    margin: 4px;
     position: relative;
     width: 300px; /* Set the width of your image container */
     overflow:hidden;
@@ -39,6 +41,7 @@ padding: 50px;
     opacity: 0; /* Start with the overlay hidden */
     transition: opacity 0.5s; /* Add a transition for the fade-in effect */
     text-decoration: none;
+    text-align: center;
     color: #fffef2;
   }
 
@@ -51,6 +54,8 @@ padding: 50px;
   .image-container:hover .overlay {
     opacity: 1; /* Show the overlay on hover */
   }
+
+  
   
   
   /* ///ITEM CARD STYLLED IN RELATION TO WIREFRAME PROPOSAL////////////////////////////

@@ -1,13 +1,16 @@
 import "./Welcome.css"
 
 export const Welcome = () => {
- return (
+ 
+    
+ 
+ return ( <> 
     <div className = "body">
 <div className="welcome-container">
 
 
 </div>
 </div>
- )
+ </>)
 
 }

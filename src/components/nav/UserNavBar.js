@@ -9,7 +9,7 @@ import { getAllUsers } from '../../services/FetchCalls'
 
 
 
-export const NavBar = ({currentUser}) => {
+export const UserNavBar = ({currentUser}) => {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [allUsers, setAllUsers] = useState([]);
@@ -63,23 +63,13 @@ export const NavBar = ({currentUser}) => {
             <div className="dropdown-item" onClick={() => handleServiceClick(1)}>Home</div>
             </Link>
 
-            <Link to="/addItem">
-            <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Add Items</div>
-            </Link>
-
-            
-            
-            
-            
-            
-            
-            {/* <Link to="/favorites">
+            <Link to="/favorites">
             <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Favorites</div>
             </Link>
 
             <Link to="/lists">
-            <div className="dropdown-item" onClick={() => handleServiceClick(3)}> Curated List</div>
-            </Link> */}
+            <div className="dropdown-item" onClick={() => handleServiceClick(3)}>Curated List</div>
+            </Link>
 
 
 {localStorage.getItem("ramblings_user") ? (

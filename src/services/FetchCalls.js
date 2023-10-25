@@ -53,5 +53,28 @@ export const getAllUsers = () => {
                     );
 
                     };
-            
+
+
+
+                  export const submitNewItem = (inputTitle,inputDescription,option,inputPrice,measurements, ) => {
+                      // Data to be sent in the request
+                      const requestData = {
+                        title: inputTitle,
+                        description: inputDescription,
+                        categoryId: parseInt(option),
+                        price:parseInt(inputPrice),
+                         images: "50",  // Assuming 'images' is an array of image URLs
+                        measurements: measurements,
+                        
+                        
+                      };
+                    
+                      return fetch("http://localhost:8088/item", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(requestData)
+                      });
+                    };
     

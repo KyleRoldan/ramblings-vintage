@@ -45,7 +45,7 @@ export const CreateItemDetails = ({ item, currentUser }) => {
         <img src={item.images[3]} alt="item detail" className="image_Display" />
       </div>
       <div className="item-details-info-box">
-        <h2>{item.price}</h2>
+        <h2>${item.price}</h2>
         <h1>{item.title}</h1>
         <p className="opaque-text">{itemCategory}</p>
         <p className="item-description">{item.description}</p>

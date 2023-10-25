@@ -117,7 +117,7 @@ console.log(allItems)
                     <img src={item.images[0]}alt="jacket" />
                     <div className="overlay">
                         <Link className="link_styling" to={`/items/${item.id}`}>{item.title}</Link>
-                        <div>{item.price}</div>
+                        <div>${item.price}</div>
                     </div>
 
 
