@@ -506,6 +506,58 @@
       "price": 100,
       "images": "50",
       "id": 25
+    },
+    {
+      "title": "",
+      "description": "",
+      "categoryId": null,
+      "price": null,
+      "images": "50",
+      "measurements": [
+        "an image of clothing",
+        "an image of jackets",
+        "an image of jackets"
+      ],
+      "id": 26
+    },
+    {
+      "title": "a great title",
+      "description": "a great description",
+      "categoryId": 1,
+      "price": 100,
+      "images": "50",
+      "measurements": [
+        "an image",
+        "an image",
+        "an image",
+        "an image"
+      ],
+      "id": 27
+    },
+    {
+      "title": "awesome title",
+      "description": "awesome description",
+      "categoryId": 2,
+      "price": 300,
+      "images": "50",
+      "newInputs": [
+        "new image",
+        "new image",
+        "new image"
+      ],
+      "id": 28
+    },
+    {
+      "title": "best title",
+      "description": "best description",
+      "categoryId": 9,
+      "price": 1000,
+      "images": [
+        "image try",
+        "image try",
+        "image try"
+      ],
+      "id": 29
     }
   ],
   "category": [

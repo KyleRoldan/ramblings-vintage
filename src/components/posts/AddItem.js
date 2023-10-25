@@ -13,7 +13,13 @@ export const AddItem = ({ currentUser }) => {
   
   const [inputPrice, setInputPrice] = useState("")
   const [allCategories, setAllCategories] = useState([])
+  
   const [searchTerm, setSearchTerm] = useState({})
+  const [newInput, setNewInput] = useState(""); // New input field
+  const [newInputs, setNewInputs] = useState([]); // Array to store new inputs
+
+
+ 
 
 
   useEffect(() => {
@@ -41,7 +47,7 @@ export const AddItem = ({ currentUser }) => {
 
 
   const handleItemSave = () => {
-    submitNewItem( inputTitle, inputDescription,  searchTerm, inputPrice).then((item) => {
+    submitNewItem( inputTitle, inputDescription,  searchTerm, inputPrice, newInputs).then((item) => {
       setItemData(item);
     });
   };
@@ -72,6 +78,20 @@ export const AddItem = ({ currentUser }) => {
     setSearchTerm(selectedId);
   };
 
+  // Add a new input to the array
+  const addNewInput = () => {
+    setNewInputs([...newInputs, newInput]);
+    setNewInput(""); // Clear the input field after adding
+  };
+
+  // Remove an input from the array
+  const removeNewInput = (index) => {
+    const updatedInputs = [...newInputs];
+    updatedInputs.splice(index, 1);
+    setNewInputs(updatedInputs);
+  };
+
+
 
 
 
@@ -92,7 +112,7 @@ export const AddItem = ({ currentUser }) => {
         value={inputTitle}
         onChange={handleTitleChange}
       />
-      
+
       <h1>Description</h1>
       <input
         className="newPost"
@@ -126,10 +146,43 @@ export const AddItem = ({ currentUser }) => {
         ))}
       </select>
 
+      
+
+
+
+
+
+
+
+
+
+
+      <h1>New Inputs</h1>
+        <input
+          className="newInput"
+          placeholder="New Input Field"
+          type="text"
+          value={newInput}
+          onChange={(e) => setNewInput(e.target.value)}
+        />
+        <button onClick={addNewInput}>Add New Input</button>
+
+        {newInputs.map((input, index) => (
+          <div key={index}>
+            {input}
+            <button onClick={() => removeNewInput(index)}>Remove</button>
+          </div>
+        ))}
+      
+      
       <Link to={`/items`}><button onClick={() => {
         handleItemSave()
 
+
+
       }}>ADD</button></Link>
+
+
 
     </div>
 

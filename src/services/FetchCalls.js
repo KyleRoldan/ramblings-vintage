@@ -56,15 +56,15 @@ export const getAllUsers = () => {
 
 
 
-                  export const submitNewItem = (inputTitle,inputDescription,option,inputPrice,measurements, ) => {
+                  export const submitNewItem = (inputTitle,inputDescription,option,inputPrice,newInputs ) => {
                       // Data to be sent in the request
                       const requestData = {
                         title: inputTitle,
                         description: inputDescription,
                         categoryId: parseInt(option),
                         price:parseInt(inputPrice),
-                         images: "50",  // Assuming 'images' is an array of image URLs
-                        measurements: measurements,
+                        images: newInputs,  // Assuming 'images' is an array of image URLs            
+                        
                         
                         
                       };
