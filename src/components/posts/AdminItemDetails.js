@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,} from "react";
 import { getAllCategories, favoriteItem, getAllFavorites, deleteItem,getAllItems } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 export const AdminItemDetails = ({ item, currentUser }) => {
+  const navigate = useNavigate;
+
   const [allItems, setAllItems] = useState([])
   const [isfavorited, setIsfavorited] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
@@ -61,9 +64,13 @@ useEffect(() => {
       if (shouldDelete) {
         // If the user clicks "OK" in the confirmation dialog
         handleDeleteItem(item.id);
-      }
+      }else {
+        // If the user clicks "Cancel" in the confirmation dialog
+        // You can navigate to a different route or page here
+        navigate("/items/:itemId");
       // If the user clicks "Cancel" in the confirmation dialog, nothing happens.
     };
+  }
   
 
   return (
@@ -81,6 +88,8 @@ useEffect(() => {
 
         <h1> <Link className="class" to={`/items`} > <button className="classic-button" onClick={confirmDelete}>DELETE</button></Link> </h1>
 
+        <h1> <Link className="class"  to={`/items/${item.id}/editItem`} ><button className="classic-button" onClick="">EDIT</button></Link></h1>
+        
        {item.userId !== currentUser.id && !isfavorited && (
           <button className="classic-button" onClick={handleLike}>Like</button>
         )}

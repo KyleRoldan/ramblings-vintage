@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllCategories, getAllItems, submitNewItem, } from "../../services/FetchCalls"
 import { Link } from "react-router-dom"
+import "./postCss/AddItem.css";
 
 
 
@@ -161,7 +162,7 @@ export const AddItem = ({ currentUser }) => {
 
         {newInputs.map((input, index) => (
           <div key={index}>
-            {input}
+            <img className="form-Image" alt="input" src={input}/>
             <button class="classic-button" onClick={() => removeNewInput(index)}>Remove</button>
           </div>
         ))}

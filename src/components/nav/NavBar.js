@@ -67,6 +67,8 @@ export const NavBar = ({currentUser}) => {
             <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Add Items</div>
             </Link>
 
+           
+
             
             
             
