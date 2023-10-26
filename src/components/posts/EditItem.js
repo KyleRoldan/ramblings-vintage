@@ -12,23 +12,23 @@ export const EditItem = () => {
         title: "",
         description: "",
         categoryId: "",
-        price:"",
+        price: "",
         images: [],  // Assuming 'images' is an array of image URLs            
-                        
+
     })
     const { itemId } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
         getAllCategories().then((categoriesArray) => {
-          setAllCategories(categoriesArray)
+            setAllCategories(categoriesArray)
         })
-      }, [])
+    }, [])
 
-      useEffect(() => {
-        
+    useEffect(() => {
+
         setSearchTerm({})
-      }, []);
+    }, []);
 
 
 
@@ -44,24 +44,24 @@ export const EditItem = () => {
     const handleCategoryChange = (event) => {
         const selectedId = event.target.value
         setSearchTerm(selectedId);
-      };
+    };
 
-    
 
-        // Add a new input to the array
-  const addEditInput = () => {
-    setNewInputs([...newInputs, newInput]);
-    setNewInput(""); // Clear the input field after adding
-  };
 
-  // Remove an input from the array
-  const removeEditInput = (index) => {
-    const updatedInputs = [...newInputs];
-    updatedInputs.splice(index, 1);
-    setNewInputs(updatedInputs);
-  };
+    // Add a new input to the array
+    const addEditInput = () => {
+        setNewInputs([...newInputs, newInput]);
+        setNewInput(""); // Clear the input field after adding
+    };
 
-const handleSaveButtonClick = (event) => {
+    // Remove an input from the array
+    const removeEditInput = (index) => {
+        const updatedInputs = [...newInputs];
+        updatedInputs.splice(index, 1);
+        setNewInputs(updatedInputs);
+    };
+
+    const handleSaveButtonClick = (event) => {
         event.preventDefault()
         return fetch(`http://localhost:8088/item/${itemId}`, {
             method: "PUT",
@@ -80,8 +80,8 @@ const handleSaveButtonClick = (event) => {
     return <div className="ticketForm">
         <h2 className="ticketForm__title">Edit Item</h2>
         <div>
-            
-            
+
+
             <div className="form-group">
                 <div>Title:</div>
                 <textarea
@@ -122,90 +122,241 @@ const handleSaveButtonClick = (event) => {
 
             <div className="form-group">
                 <div>Category:</div>
-                  
-      <select
-        value={searchTerm}
-        onChange={handleCategoryChange}>
-        <option>Select an Category</option>
 
-        {allCategories.map((category) => (
-          <option key={category.id} value={category.id}>
-            {category.name}
-          </option>
-        ))}
-      </select>
+                <select
+                    value={searchTerm}
+                    onChange={handleCategoryChange}>
+                    <option>Select an Category</option>
+
+                    {allCategories.map((category) => (
+                        <option key={category.id} value={category.id}>
+                            {category.name}
+                        </option>
+                    ))}
+                </select>
 
 
-      <div className="form-group">
-                <div>Price:</div>
+                <div className="form-group">
+                    <div>Price:</div>
+                    <textarea
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: ""
+                        }}
+                        className="form-control"
+                        value={ticket.price}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.price = evt.target.value
+                                assignTicket(copy)
+                            }
+                        }>{ticket.price}</textarea>
+                </div>
+
+
+                <h1>New Inputs</h1>
+                <div> <img className="form-Image" alt="input" src={ticket.images[0]} />
+                    <textarea
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "50px",
+                            width: "600px"
+                        }}
+                        className="form-control"
+                        value={ticket.images[0]}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...ticket }
+                                copy.images[0] = evt.target.value
+                                assignTicket(copy)
+                            }
+                        }>{ticket.images[0]}</textarea></div>
+
+                <div> <img className="form-Image" alt="input" src={ticket.images[1]}/>
                 <textarea
                     required autoFocus
                     type="text"
                     style={{
-                        height: ""
+                        height: "50px",
+                        width: "600px"
                     }}
                     className="form-control"
-                    value={ticket.price}
+                    value={ticket.images[1]}
                     onChange={
                         (evt) => {
                             const copy = { ...ticket }
-                            copy.price = evt.target.value
+                            copy.images[1] = evt.target.value
                             assignTicket(copy)
                         }
-                    }>{ticket.price}</textarea>
+                    }>{ticket.images[1]}</textarea></div>
+                    <div> <img className="form-Image" alt="input" src={ticket.images[2]}/>
+
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[2]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[2] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[2]}</textarea></div>
+
+<div> <img className="form-Image" alt="input" src={ticket.images[3]}/>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[3]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[3] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[3]}</textarea></div>
+
+<div> <img className="form-Image" alt="input" src={ticket.images[4]}/>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[4]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[4] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[4]}</textarea></div>
+
+<div> <img className="form-Image" alt="input" src={ticket.images[5]}/>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[5]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[5] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[5]}</textarea></div>
+
+                <div> <img className="form-Image" alt="input" src={ticket.images[6]}/>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[6]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[6] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[6]}</textarea></div>
+
+<div> <img className="form-Image" alt="input" src={ticket.images[7]}/>
+                <textarea
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "50px",
+                        width: "600px"
+                    }}
+                    className="form-control"
+                    value={ticket.images[7]}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...ticket }
+                            copy.images[7] = evt.target.value
+                            assignTicket(copy)
+                        }
+                    }>{ticket.images[7]}</textarea></div>
+
+
+
+
+
+
+
+
+                <input
+                    className="newInput"
+                    placeholder="New Image"
+                    type="text"
+                    value={newInput}
+                    onChange={(e) => setNewInput(e.target.value)}
+                />
+                <button class="classic-button" onClick={addEditInput}>Add New Image</button>
+
+                {newInputs.map((input, index) => (
+                    <div key={index}>
+                        <img className="form-Image" alt="input" src={input} />
+                        <button class="classic-button" onClick={() => removeEditInput(index)}>Remove</button>
+                    </div>
+                ))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
 
 
-            <h1>New Inputs</h1>
-        <input 
-          className="newInput"
-          placeholder="New Image"
-          type="text"
-          value={newInput}
-          onChange={(e) => setNewInput(e.target.value)}
-        />
-        <button class="classic-button" onClick={addEditInput}>Add New Image</button>
-
-        {newInputs.map((input, index) => (
-          <div key={index}>
-            <img className="form-Image" alt="input" src={input}/>
-            <button class="classic-button" onClick={() => removeEditInput(index)}>Remove</button>
-          </div>
-        ))}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-          
 
 
 
@@ -243,14 +394,14 @@ const handleSaveButtonClick = (event) => {
 
         </div>
 
-        
 
 
 
 
 
 
-        
+
+
         <Link to={`/items`}><button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">

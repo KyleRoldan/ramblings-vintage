@@ -456,7 +456,7 @@
         "pit to hem": "12 in",
         "front": "37 in"
       },
-      "price": 175,
+      "price": "1750000000000001",
       "currency": "USD",
       "quantity": 1,
       "images": [
@@ -473,9 +473,14 @@
       "categoryId": 7,
       "price": "75",
       "images": [
-        "https://i.etsystatic.com/16189360/r/il/119fc0/4919244443/il_fullxfull.4919244443_kmkg.jpg",
-        "https://i.etsystatic.com/16189360/r/il/119fc0/4919244443/il_fullxfull.4919244443_kmkg.jpg",
-        "https://i.etsystatic.com/16189360/r/il/ce2d3c/4919244445/il_fullxfull.4919244445_47nf.jpg"
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
       ],
       "id": 24
     }
