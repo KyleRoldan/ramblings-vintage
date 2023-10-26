@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { getAllCategories, favoriteItem, getAllFavorites } from "../../services/FetchCalls";
+import { getAllCategories, favoriteItem, getAllFavorites, deleteItem,getAllItems } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
+import { Link } from "react-router-dom";
 
 
-export const CreateItemDetails = ({ item, currentUser }) => {
+export const AdminItemDetails = ({ item, currentUser }) => {
+  const [allItems, setAllItems] = useState([])
   const [isfavorited, setIsfavorited] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
   const [favoriteCount, setFavoriteCount] = useState([]);
   const [allFavorites, setAllFavorites] = useState([]);
+console.log(item)
 
-  useEffect(() => {
+useEffect(() => {
+  getAllItems().then((itemsArray) => {
+    setAllItems(itemsArray);
+
+  })
+}, [])
+  
+useEffect(() => {
     getAllFavorites().then((favoritesArray) => {
       setAllFavorites(favoritesArray);
     });
@@ -32,10 +42,29 @@ export const CreateItemDetails = ({ item, currentUser }) => {
       });
     }
   };
+///////////////////HANDLE DELETE POST/////////////////////////////////////////////////////////////
+  const handleDeleteItem = (itemId) => {
+    // Delete the post from the database
+    deleteItem(itemId).then(() => {
+      // Remove the deleted post from filteredMyPosts
+      setAllItems((deletedItem) => deletedItem.filter((item) => item.id !== itemId));
+    });
+  };
 
   if (!item || !item.title) {
     return <div>Loading...</div>;
   }
+  
+    const confirmDelete = () => {
+      const shouldDelete = window.confirm("Are you sure you want to delete this item?");
+  
+      if (shouldDelete) {
+        // If the user clicks "OK" in the confirmation dialog
+        handleDeleteItem(item.id);
+      }
+      // If the user clicks "Cancel" in the confirmation dialog, nothing happens.
+    };
+  
 
   return (
     <div className="post-details">
@@ -46,11 +75,14 @@ export const CreateItemDetails = ({ item, currentUser }) => {
       </div>
       <div className="item-details-info-box">
         <h2>${item.price}</h2>
-        <h1>{item.title}</h1>
+        <h1>ADMIN PAGE {item.title}</h1>
         <p className="opaque-text">{itemCategory}</p>
         <p className="item-description">{item.description}</p>
-        {item.userId !== currentUser.id && !isfavorited && (
-          <button onClick={handleLike}>Like</button>
+
+        <h1> <Link className="class" to={`/items`} > <button className="classic-button" onClick={confirmDelete}>DELETE</button></Link> </h1>
+
+       {item.userId !== currentUser.id && !isfavorited && (
+          <button className="classic-button" onClick={handleLike}>Like</button>
         )}
         {favoriteCount[item.id] || 0}
       </div>

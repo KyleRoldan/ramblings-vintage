@@ -269,30 +269,6 @@
       ]
     },
     {
-      "id": 14,
-      "categoryId": 2,
-      "title": "Vintage 70s/80s L.L. Bean Denim Overalls sz 32/32 Made in USA",
-      "description": "waist: 16.5 in",
-      "measurements": {
-        "waist": "16.5 in",
-        "inseam": "32 in"
-      },
-      "price": 225,
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/761950/5073451295/il_fullxfull.5073451295_hvmh.jpg",
-        "https://i.etsystatic.com/16189360/r/il/859029/5025226674/il_fullxfull.5025226674_dvu6.jpg",
-        "https://i.etsystatic.com/16189360/r/il/67896d/5025226848/il_fullxfull.5025226848_z10l.jpg",
-        "https://i.etsystatic.com/16189360/r/il/a630de/5073451881/il_fullxfull.5073451881_45h1.jpg",
-        "https://i.etsystatic.com/16189360/r/il/b9e91c/5073452093/il_fullxfull.5073452093_330l.jpg",
-        "https://i.etsystatic.com/16189360/r/il/1db640/5073452249/il_fullxfull.5073452249_t16d.jpg",
-        "https://i.etsystatic.com/16189360/r/il/4f473e/5025227784/il_fullxfull.5025227784_579t.jpg",
-        "https://i.etsystatic.com/16189360/r/il/63deda/5025227920/il_fullxfull.5025227920_ehxu.jpg",
-        "https://i.etsystatic.com/16189360/r/il/077c26/5073452941/il_fullxfull.5073452941_4y6y.jpg"
-      ]
-    },
-    {
       "id": 15,
       "categoryId": 3,
       "title": "Vintage 90s Levis 505 Made in USA sz 34/30",
@@ -490,74 +466,6 @@
         "https://i.etsystatic.com/16189360/r/il/d1c039/4922434505/il_fullxfull.4922434505_kh68.jpg",
         "https://i.etsystatic.com/16189360/r/il/d87d25/4874170948/il_fullxfull.4874170948_5o1t.jpg"
       ]
-    },
-    {
-      "title": "description",
-      "description": "title",
-      "categoryId": 2,
-      "price": 56,
-      "images": "50",
-      "id": 24
-    },
-    {
-      "title": "title",
-      "description": "description",
-      "categoryId": 1,
-      "price": 100,
-      "images": "50",
-      "id": 25
-    },
-    {
-      "title": "",
-      "description": "",
-      "categoryId": null,
-      "price": null,
-      "images": "50",
-      "measurements": [
-        "an image of clothing",
-        "an image of jackets",
-        "an image of jackets"
-      ],
-      "id": 26
-    },
-    {
-      "title": "a great title",
-      "description": "a great description",
-      "categoryId": 1,
-      "price": 100,
-      "images": "50",
-      "measurements": [
-        "an image",
-        "an image",
-        "an image",
-        "an image"
-      ],
-      "id": 27
-    },
-    {
-      "title": "awesome title",
-      "description": "awesome description",
-      "categoryId": 2,
-      "price": 300,
-      "images": "50",
-      "newInputs": [
-        "new image",
-        "new image",
-        "new image"
-      ],
-      "id": 28
-    },
-    {
-      "title": "best title",
-      "description": "best description",
-      "categoryId": 9,
-      "price": 1000,
-      "images": [
-        "image try",
-        "image try",
-        "image try"
-      ],
-      "id": 29
     }
   ],
   "category": [

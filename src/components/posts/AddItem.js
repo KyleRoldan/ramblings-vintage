@@ -92,14 +92,6 @@ export const AddItem = ({ currentUser }) => {
   };
 
 
-
-
-
-
-
-
-
-
   return (<>
 
     <div>
@@ -158,33 +150,41 @@ export const AddItem = ({ currentUser }) => {
 
 
       <h1>New Inputs</h1>
-        <input
+        <input 
           className="newInput"
-          placeholder="New Input Field"
+          placeholder="New Image"
           type="text"
           value={newInput}
           onChange={(e) => setNewInput(e.target.value)}
         />
-        <button onClick={addNewInput}>Add New Input</button>
+        <button class="classic-button" onClick={addNewInput}>Add New Image</button>
 
         {newInputs.map((input, index) => (
           <div key={index}>
             {input}
-            <button onClick={() => removeNewInput(index)}>Remove</button>
+            <button class="classic-button" onClick={() => removeNewInput(index)}>Remove</button>
           </div>
         ))}
       
-      
-      <Link to={`/items`}><button onClick={() => {
+      <h1>Add Item to Listings</h1>
+      <Link to={`/items`}><button class="classic-button" onClick={() => {
         handleItemSave()
 
 
 
       }}>ADD</button></Link>
 
-
+     
 
     </div>
+
+
+
+
+
+
+
+
 
   </>
   )

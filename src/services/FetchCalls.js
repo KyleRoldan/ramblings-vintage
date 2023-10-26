@@ -77,4 +77,10 @@ export const getAllUsers = () => {
                         body: JSON.stringify(requestData)
                       });
                     };
+
+                    export const deleteItem = (itemId) => {
+                      return fetch(`http://localhost:8088/item/${itemId}`, {
+                        method: "DELETE",
+                      });
+                    };
     

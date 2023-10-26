@@ -6,6 +6,8 @@ import { ItemDetails } from "../components/posts/Itemdetails"
 import { Favorites } from "../components/posts/Favorites"
 import { AllLists } from "../components/posts/AllLists"
 import { AddItem } from "../components/posts/AddItem"
+import { AdminItemDetails } from "../components/posts/AdminItemDetails"
+
 
 
 
