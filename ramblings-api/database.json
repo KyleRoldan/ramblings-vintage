@@ -46,7 +46,7 @@
       "measurements": {
         "approxSize": "~ 14 in x 10 in"
       },
-      "price": 65,
+      "price": "55",
       "currency": "USD",
       "quantity": 1,
       "images": [
@@ -57,10 +57,10 @@
     {
       "id": 3,
       "categoryId": 8,
-      "title": "Edited Vintage Madewell Flannel shirt sz XL",
-      "description": "Edited please message if you have any questions regarding size or condition\n* has been cropped",
+      "title": "Vintage Madewell Flannel shirt sz XL",
+      "description": "please message if you have any questions regarding size or condition\n* has been cropped",
       "measurements": {},
-      "price": "100000000",
+      "price": "125",
       "currency": "USD",
       "quantity": 1,
       "images": [
@@ -466,23 +466,6 @@
         "https://i.etsystatic.com/16189360/r/il/d1c039/4922434505/il_fullxfull.4922434505_kh68.jpg",
         "https://i.etsystatic.com/16189360/r/il/d87d25/4874170948/il_fullxfull.4874170948_5o1t.jpg"
       ]
-    },
-    {
-      "title": "Macgregor Shirt Wool",
-      "description": "please contact me for iformation",
-      "categoryId": 7,
-      "price": "75",
-      "images": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "id": 24
     }
   ],
   "category": [

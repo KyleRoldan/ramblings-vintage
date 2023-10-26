@@ -79,7 +79,7 @@ console.log(allItems)
         setFilteredItems(foundItems);
     }, [selectedCategory, searchTerm, allItems]);
 
-
+    
 
     /////////////////////////////////////////////////////////////////
 

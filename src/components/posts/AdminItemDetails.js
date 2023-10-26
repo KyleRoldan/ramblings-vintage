@@ -62,14 +62,11 @@ useEffect(() => {
       const shouldDelete = window.confirm("Are you sure you want to delete this item?");
   
       if (shouldDelete) {
-        // If the user clicks "OK" in the confirmation dialog
+       
         handleDeleteItem(item.id);
-      }else {
-        // If the user clicks "Cancel" in the confirmation dialog
-        // You can navigate to a different route or page here
-        navigate("/items/:itemId");
-      // If the user clicks "Cancel" in the confirmation dialog, nothing happens.
-    };
+        
+      }
+   
   }
   
 
@@ -88,7 +85,7 @@ useEffect(() => {
 
         <h1> <Link className="class" to={`/items`} > <button className="classic-button" onClick={confirmDelete}>DELETE</button></Link> </h1>
 
-        <h1> <Link className="class"  to={`/items/${item.id}/editItem`} ><button className="classic-button" onClick="">EDIT</button></Link></h1>
+        <h1> <Link className="class"  to={`/items/${item.id}/editItem`} ><button className="classic-button" >EDIT</button></Link></h1>
         
        {item.userId !== currentUser.id && !isfavorited && (
           <button className="classic-button" onClick={handleLike}>Like</button>

@@ -72,7 +72,7 @@ export const EditItem = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/items/:itemId")
+                navigate(`/items/${itemId}`)
             })
     }
 
@@ -315,97 +315,27 @@ export const EditItem = () => {
                     value={newInput}
                     onChange={(e) => setNewInput(e.target.value)}
                 />
-                <button class="classic-button" onClick={addEditInput}>Add New Image</button>
+                <button className="classic-button" onClick={addEditInput}>Add New Image</button>
 
                 {newInputs.map((input, index) => (
                     <div key={index}>
                         <img className="form-Image" alt="input" src={input} />
-                        <button class="classic-button" onClick={() => removeEditInput(index)}>Remove</button>
+                        <button className="classic-button" onClick={() => removeEditInput(index)}>Remove</button>
                     </div>
                 ))}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
 
 
-
-
-
-
-
-
-
-        <Link to={`/items`}><button
+        <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">
             Save Edits
-        </button></Link>
+        </button>
     </div>
 }
