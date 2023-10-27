@@ -21,12 +21,6 @@ export const ItemDetails = ({ currentUser }) => {
       
     });
   }, [itemId]);
-
-  
-  
-
-  console.log(item)
-  console.log(currentUser)
   
   return currentUser.isAdmin ? (<AdminItemDetails  item={item} currentUser={currentUser}/>) : (<CreateItemDetails item={item} currentUser={currentUser}/>)  
 };

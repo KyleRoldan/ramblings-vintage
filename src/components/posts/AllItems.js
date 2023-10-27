@@ -54,7 +54,6 @@ export const AllItems = ({ currentUser }) => {
     /////////////////////////////////////////////////////////////////
 
     /////////////////Search Features/////////////////////////////////
-console.log(allItems)
 
     useEffect(() => {
         const foundItems = allItems.filter((item) => {
@@ -128,6 +127,7 @@ console.log(allItems)
                 </div>
 
             ))}
+            
         </div>
 
 {/* ////////////ItEM CARD STYLED IN RELATION TO CAPSTONE WIREFRAM//////////////////////////////*/}

@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { getAllCategories, favoriteItem, getAllFavorites } from "../../services/FetchCalls";
+import { getAllCategories, getAllUsers, getAllFavorites, getAllItems, assignLike, updateLike, getFavoritedItems, deleteLike } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
+import { FavoriteButton } from "./FavoriteButton";
+
+
+
+
+
+
 
 
 export const CreateItemDetails = ({ item, currentUser }) => {
-  const [isfavorited, setIsfavorited] = useState(false);
+  const [allItems, setAllItems] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
-  const [favoriteCount, setFavoriteCount] = useState([]);
-  const [allFavorites, setAllFavorites] = useState([]);
+  const [allFavorites, setAllFavorites] = useState([])
+  const [likeCount, setLikeCount] = useState([])
+  const [allFavoriteItems, setAllFavoriteItems] = useState({})
+  const [isFavorite, setIsFavorite] = useState(false);
+  
+  
+  const userId = currentUser.id
+  const itemId = item.id
 
   useEffect(() => {
-    getAllFavorites().then((favoritesArray) => {
-      setAllFavorites(favoritesArray);
+    getAllItems().then((itemArray) => {
+      setAllItems(itemArray);
     });
   }, []);
 
@@ -21,21 +34,62 @@ export const CreateItemDetails = ({ item, currentUser }) => {
     });
   }, []);
 
+  
+
+  useEffect(() => {
+    getAllFavorites().then((favArray) => {
+      setAllFavorites(favArray);
+    });
+  }, []);
+  
+
+  useEffect(() => {
+    getFavoritedItems().then((favItemArray) => {
+      setAllFavoriteItems(favItemArray);
+    });
+  }, []);
+
+
+
+
+  useEffect(() => {
+    const postLikeCounts = {}
+
+    allItems.forEach((item) => {
+      const likesForPost = allFavorites.filter(
+        (like) => like.itemId === item.id
+      )
+      postLikeCounts[item.id] = likesForPost.length
+    })
+
+    setLikeCount(postLikeCounts)
+  }, [allFavorites, allItems, item.id])
+
+  
   const itemCategory = allCategories
     .filter(category => category.id === item.categoryId)
     .map(topic => topic.name);
 
-  const handleLike = () => {
-    if (!currentUser.isAdmin) {
-      favoriteItem(item.id, currentUser.id).then(() => {
-        setIsfavorited(true);
-      });
-    }
-  };
+  
+  
+    const handleFavoriteChange = (updatedIsFavorite) => {
+    
+          setIsFavorite(updatedIsFavorite);
+      
+        };
+    
+      
+
+
+
+
 
   if (!item || !item.title) {
     return <div>Loading...</div>;
   }
+
+  console.log(itemId)
+  console.log(userId)
 
   return (
     <div className="post-details">
@@ -49,11 +103,33 @@ export const CreateItemDetails = ({ item, currentUser }) => {
         <h1>{item.title}</h1>
         <p className="opaque-text">{itemCategory}</p>
         <p className="item-description">{item.description}</p>
-        {item.userId !== currentUser.id && !isfavorited && (
-          <button onClick={handleLike}>Like</button>
-        )}
-        {favoriteCount[item.id] || 0}
+        <div>
+
+        <div>
+        <FavoriteButton
+         itemId= {itemId} 
+         userId={userId}
+         isFavorite={isFavorite}
+        onFavoriteChange={handleFavoriteChange}
+        />
+      </div>
+
+
+
+          <div key={item.id}>
+            Likes: {likeCount[item.id] || 0}
+          </div>
+
+
+
+
+
+
+        </div>
       </div>
     </div>
   );
 };
+
+
+

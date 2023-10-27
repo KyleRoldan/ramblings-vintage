@@ -13,7 +13,7 @@ export const EditItem = () => {
         description: "",
         categoryId: "",
         price: "",
-        images: [],  // Assuming 'images' is an array of image URLs            
+        images: [],            
 
     })
     const { itemId } = useParams()
@@ -334,7 +334,7 @@ export const EditItem = () => {
 
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-            className="btn btn-primary">
+            className="classic-button">
             Save Edits
         </button>
     </div>

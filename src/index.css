@@ -14,9 +14,9 @@ button{
     background-color:  #FFFEF2;
     color: #000000;
     border: 1px solid #000000;
-    border-radius: 30px;
+    border-radius: 25px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 15px;
     font-weight:bold;
     padding: 12px 24px;
     transition-duration: 0.4s;

@@ -11,9 +11,7 @@ export const AdminItemDetails = ({ item, currentUser }) => {
   const [allItems, setAllItems] = useState([])
   const [isfavorited, setIsfavorited] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
-  const [favoriteCount, setFavoriteCount] = useState([]);
-  const [allFavorites, setAllFavorites] = useState([]);
-console.log(item)
+  
 
 useEffect(() => {
   getAllItems().then((itemsArray) => {
@@ -22,11 +20,7 @@ useEffect(() => {
   })
 }, [])
   
-useEffect(() => {
-    getAllFavorites().then((favoritesArray) => {
-      setAllFavorites(favoritesArray);
-    });
-  }, []);
+
 
   useEffect(() => {
     getAllCategories().then((categoryArray) => {
@@ -38,13 +32,7 @@ useEffect(() => {
     .filter(category => category.id === item.categoryId)
     .map(topic => topic.name);
 
-  const handleLike = () => {
-    if (!currentUser.isAdmin) {
-      favoriteItem(item.id, currentUser.id).then(() => {
-        setIsfavorited(true);
-      });
-    }
-  };
+  
 ///////////////////HANDLE DELETE POST/////////////////////////////////////////////////////////////
   const handleDeleteItem = (itemId) => {
     // Delete the post from the database
@@ -87,10 +75,7 @@ useEffect(() => {
 
         <h1> <Link className="class"  to={`/items/${item.id}/editItem`} ><button className="classic-button" >EDIT</button></Link></h1>
         
-       {item.userId !== currentUser.id && !isfavorited && (
-          <button className="classic-button" onClick={handleLike}>Like</button>
-        )}
-        {favoriteCount[item.id] || 0}
+       
       </div>
     </div>
   );

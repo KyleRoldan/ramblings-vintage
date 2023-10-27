@@ -1,16 +1,16 @@
 {
   "user": [
     {
-      "fullName": "buthead",
-      "email": "mcgoo@aol.com",
+      "fullName": "Admin",
+      "email": "Admin@gmail.com",
       "isAdmin": true,
       "id": 1
     },
     {
-      "fullName": "Honey-Rae Swan-Roldan",
-      "email": "honey-raeswan-roldan@gmail.com",
+      "fullName": "User",
+      "email": "User@gmail.com",
       "isAdmin": false,
-      "id": 4
+      "id": 2
     }
   ],
   "item": [
@@ -122,24 +122,6 @@
         "https://i.etsystatic.com/16189360/r/il/227227/4605001329/il_fullxfull.4605001329_bklo.jpg",
         "https://i.etsystatic.com/16189360/r/il/2b1fcd/4605001387/il_fullxfull.4605001387_r6cl.jpg",
         "https://i.etsystatic.com/16189360/r/il/4c385f/4605001425/il_fullxfull.4605001425_8y8r.jpg"
-      ]
-    },
-    {
-      "id": 7,
-      "categoryId": 11,
-      "title": "Vintage 90s Tube Top Sz L",
-      "description": "Please message if you have any questions regarding size or condition",
-      "measurements": {
-        "Pit to Pit": "16 in"
-      },
-      "price": 30,
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/658e75/4922672829/il_fullxfull.4922672829_knnu.jpg",
-        "https://i.etsystatic.com/16189360/r/il/6f8c66/4922672807/il_fullxfull.4922672807_9gi4.jpg",
-        "https://i.etsystatic.com/16189360/r/il/7b431b/4922672749/il_fullxfull.4922672749_0lmk.jpg",
-        "https://i.etsystatic.com/16189360/r/il/5f17f4/4922672791/il_fullxfull.4922672791_o48u.jpg"
       ]
     },
     {
@@ -363,27 +345,6 @@
       ]
     },
     {
-      "id": 19,
-      "categoryId": 7,
-      "title": "Vintage 90s Ocean Pacific Graphic Pocket T-Shirt sz M Made in USA 100% Cotton",
-      "description": "please message if you have any questions regarding size or condition",
-      "measurements": {
-        "pit to pit": "17 in",
-        "pit to hem": "12 in"
-      },
-      "price": 30,
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/ea2b97/4553733380/il_fullxfull.4553733380_gdhu.jpg",
-        "https://i.etsystatic.com/16189360/r/il/fbf9c9/4601121019/il_fullxfull.4601121019_53f2.jpg",
-        "https://i.etsystatic.com/16189360/r/il/adf395/4601120831/il_fullxfull.4601120831_6c8q.jpg",
-        "https://i.etsystatic.com/16189360/r/il/86a315/4601121043/il_fullxfull.4601121043_6874.jpg",
-        "https://i.etsystatic.com/16189360/r/il/04a7fe/4553733408/il_fullxfull.4553733408_2bcf.jpg",
-        "https://i.etsystatic.com/16189360/r/il/2fac6f/4553733418/il_fullxfull.4553733418_99v6.jpg"
-      ]
-    },
-    {
       "id": 20,
       "categoryId": 8,
       "title": "Vintage 90's Floral Blouse Sz M",
@@ -445,27 +406,6 @@
         "https://i.etsystatic.com/16189360/r/il/0782f4/4922681809/il_fullxfull.4922681809_oje5.jpg",
         "https://i.etsystatic.com/16189360/r/il/9b8a48/4922681969/il_fullxfull.4922681969_bbk1.jpg"
       ]
-    },
-    {
-      "id": 23,
-      "categoryId": 10,
-      "title": "Vintage 70s JC Penny Patchwork dress sz L",
-      "description": "Please message if you have any questions regarding size or condition.",
-      "measurements": {
-        "pit to pit": "19.5 in",
-        "pit to hem": "12 in",
-        "front": "37 in"
-      },
-      "price": "1750000000000001",
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/a5c9ee/4922433299/il_fullxfull.4922433299_rtrr.jpg",
-        "https://i.etsystatic.com/16189360/r/il/b73e71/4874169416/il_fullxfull.4874169416_nd0v.jpg",
-        "https://i.etsystatic.com/16189360/r/il/75536e/4922434221/il_fullxfull.4922434221_qoor.jpg",
-        "https://i.etsystatic.com/16189360/r/il/d1c039/4922434505/il_fullxfull.4922434505_kh68.jpg",
-        "https://i.etsystatic.com/16189360/r/il/d87d25/4874170948/il_fullxfull.4874170948_5o1t.jpg"
-      ]
     }
   ],
   "category": [
@@ -524,44 +464,24 @@
   ],
   "favorite": [
     {
-      "id": 1,
-      "itemId": 1,
-      "userId": 1
+      "itemId": 3,
+      "userId": 2,
+      "id": 1
     },
     {
-      "id": 2,
-      "itemId": 2,
-      "userId": 1
+      "itemId": 3,
+      "userId": 2,
+      "id": 2
     },
     {
-      "itemId": 1,
-      "userId": 1,
+      "itemId": 3,
+      "userId": 2,
       "id": 3
     },
     {
-      "itemId": 1,
-      "userId": 1,
+      "itemId": 3,
+      "userId": 2,
       "id": 4
-    },
-    {
-      "itemId": 1,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "itemId": 1,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "itemId": 2,
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "itemId": 2,
-      "userId": 1,
-      "id": 8
     }
   ],
   "user_list_item": [
