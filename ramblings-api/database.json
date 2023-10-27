@@ -7,8 +7,8 @@
       "id": 1
     },
     {
-      "fullName": "User",
-      "email": "User@gmail.com",
+      "fullName": "user 2",
+      "email": "user@gmail.com",
       "isAdmin": false,
       "id": 2
     }
@@ -464,24 +464,59 @@
   ],
   "favorite": [
     {
-      "itemId": 3,
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "itemId": 3,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "itemId": 3,
+      "itemId": 4,
       "userId": 2,
       "id": 3
     },
     {
-      "itemId": 3,
-      "userId": 2,
+      "itemId": 1,
+      "userId": 3,
       "id": 4
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "itemId": 1,
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "itemId": 22,
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "itemId": 21,
+      "userId": 3,
+      "id": 12
+    },
+    {
+      "itemId": 20,
+      "userId": 3,
+      "id": 13
     }
   ],
   "user_list_item": [

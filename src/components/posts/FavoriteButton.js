@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
+  const [alreadyFavorited, setAlreadyFavorited] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     // You can use an API call here to check if the item is already favorited by the user
-    fetch(`http://localhost:8088/favorite/${itemId}?userId=${userId}`)
+    fetch(`http://localhost:8088/favorite?itemId=${itemId}&userId=${userId}`)
       .then((response) => response.json())
       .then((data) => {
-        setIsFavorite(data.isFavorite); // Assuming the API returns a boolean indicating if it's favorited
+        setAlreadyFavorited(data); // Assuming the API returns a boolean indicating if it's favorited
+        if (alreadyFavorited.length === 1) {
+          setIsFavorite(true)
+        }
       });
-  }, [itemId, userId]);
+  }, [itemId, userId, alreadyFavorited.length]);
+  
 
   const handleFavorite = () => {
     fetch("http://localhost:8088/favorite", {
@@ -31,11 +36,9 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
   };
 
   const handleUnfavorite = () => {
-    fetch(`http://localhost:8088/favorite/${itemId}?userId=${userId}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    fetch(`http://localhost:8088/favorite?itemId=${itemId}&userId=${userId}`, {
+      method: 'DELETE'
+      
     })
       .then((response) => response.json())
       .then(() => {

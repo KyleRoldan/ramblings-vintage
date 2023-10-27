@@ -88,9 +88,6 @@ export const CreateItemDetails = ({ item, currentUser }) => {
     return <div>Loading...</div>;
   }
 
-  console.log(itemId)
-  console.log(userId)
-
   return (
     <div className="post-details">
       <div className="imageBox">
