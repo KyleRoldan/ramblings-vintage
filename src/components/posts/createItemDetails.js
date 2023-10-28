@@ -104,6 +104,7 @@ export const CreateItemDetails = ({ item, currentUser }) => {
 
         <div>
         <FavoriteButton
+         
          itemId= {itemId} 
          userId={userId}
          isFavorite={isFavorite}

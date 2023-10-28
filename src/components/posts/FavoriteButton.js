@@ -28,6 +28,8 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
         }
       });
   }, [itemId, userId, alreadyFavorited.length]);
+
+  
   
 
   const handleFavorite = () => {
@@ -53,6 +55,7 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
       deleteFavorite(test[0].id)
       setIsFavorite(false)
   };
+
 
   return (
     <div>
