@@ -42,6 +42,20 @@ export const getItemById = (itemId) => {
 
 };
 
+export const getFavoriteRelationship = (itemId,userId) => {
+
+  return fetch(`http://localhost:8088/favorite?itemId=${itemId}&userId=${userId}`).then(
+    (res) => res.json()
+  )
+
+}
+
+export const deleteFavorite = (id) => {
+  return fetch(`http://localhost:8088/favorite/${id}`, {
+    method: "DELETE",
+  });
+};
+
 
 
 export const submitNewItem = (inputTitle, inputDescription, option, inputPrice, newInputs) => {
@@ -123,6 +137,8 @@ export const deleteLike = (itemId) => {
 
 
 }
+
+
 
 
 
