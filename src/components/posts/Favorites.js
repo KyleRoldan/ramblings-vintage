@@ -154,10 +154,10 @@ export const Favorites = ({currentUser}) => {
 
 
 
-<h1>MY FAVORITES</h1>
+     <h1>MY FAVORITES</h1>
 
 
-<div className="image-container_whole">
+     <div className="image-container_whole">
         {filteredItems.map((item) => (
           <div className="image-container" key={item.id}>
             <img src={item.images[0]} alt="jacket" />
