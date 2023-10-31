@@ -36,14 +36,20 @@ export const EditItem = () => {
         fetch(`http://localhost:8088/item/${itemId}`)
             .then(response => response.json())
             .then((data) => {
-                assignTicket(data)
-            })
-    }, [itemId])
+                assignTicket(data);
+    
+                // Set the initial value of the searchTerm to the current category ID
+                setSearchTerm(data.categoryId);
+            });
+    }, [itemId]);
 
 
     const handleCategoryChange = (event) => {
-        const selectedId = event.target.value
-        setSearchTerm(selectedId);
+        const selectedId = event.target.value;
+        setSearchTerm(selectedId); // Update searchTerm
+        const copy = { ...ticket };
+        copy.categoryId = selectedId; // Update categoryId in the copy of ticket
+        assignTicket(copy); // Update the ticket state
     };
 
 
@@ -124,16 +130,16 @@ export const EditItem = () => {
                 <div>Category:</div>
 
                 <select
-                    value={searchTerm}
-                    onChange={handleCategoryChange}>
-                    <option>Select an Category</option>
+    value={searchTerm} 
+    onChange={handleCategoryChange}
+>
+    {allCategories.map((category) => (
+        <option key={category.id} value={category.id}>
+            {category.name}
+        </option>
+    ))}
+</select>
 
-                    {allCategories.map((category) => (
-                        <option key={category.id} value={category.id}>
-                            {category.name}
-                        </option>
-                    ))}
-                </select>
 
 
                 <div className="form-group">
@@ -247,7 +253,7 @@ export const EditItem = () => {
                         }
                     }>{ticket.images[4]}</textarea></div>
 
-<div> <img className="form-Image" alt="input" src={ticket.images[5]}/>
+<div> <img className="form-Image" alt="iput" src={ticket.images[5]}/>
                 <textarea
                     required autoFocus
                     type="text"

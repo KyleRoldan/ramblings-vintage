@@ -57,7 +57,8 @@ padding: 50px;
 
   .searchSort-container{
    display: flex;
-   border: 2px dotted black;
+   /* border: 2px dotted black; */
+   
    
    
    justify-content: flex-end;
@@ -69,6 +70,11 @@ padding: 50px;
     justify-self: center;
    
    
+  }
+
+  .searchSort-container:hover{
+    cursor: pointer;
+
   }
 
   .category-search-input{
@@ -107,7 +113,7 @@ padding: 50px;
 
 
   .dropdown {
-   border:2px dotted black;
+   /* border:2px dotted black; */
     
   }
 

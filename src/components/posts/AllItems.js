@@ -141,10 +141,27 @@ export const AllItems = ({ currentUser }) => {
                         className="title-search-input"
                     />
 
-                    <div
+
+<div className="sort-box">
+                <select
+                    className="category-search-input"
+                    value={selectedCategory}
+                    onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
+                >
+                    <option className="dropdown" value="All">All</option>
+                    {allCategories.map((itemOption) => (
+                        <option className="dropdown-option" key={itemOption.id} value={itemOption.id}>
+                            {itemOption.name}
+                        </option>
+                    ))}
+                </select>
+            </div> 
+
+                    {/* <div
+                        
                         className="dropdown-secondary"
                         onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
-                    >ALLLLLLLLLLLL</div>
+                    >Categories</div>
                     {isDropdownOpenSecondary && (
                     <div>
                     {allCategories.map((itemOption) => (
@@ -159,7 +176,7 @@ export const AllItems = ({ currentUser }) => {
                         </button>
                     ))}
                 </div>
-                    )}
+                    )} */}
                 </div>
             )}
 

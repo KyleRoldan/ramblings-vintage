@@ -50,20 +50,20 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   }, []);
 
 
+//////////DISPLAY A LIKE COUNT///////////////////////////////////////////////////
 
+  // useEffect(() => {
+  //   const postLikeCounts = {}
 
-  useEffect(() => {
-    const postLikeCounts = {}
+  //   allItems.forEach((item) => {
+  //     const likesForPost = allFavorites.filter(
+  //       (like) => like.itemId === item.id
+  //     )
+  //     postLikeCounts[item.id] = likesForPost.length
+  //   })
 
-    allItems.forEach((item) => {
-      const likesForPost = allFavorites.filter(
-        (like) => like.itemId === item.id
-      )
-      postLikeCounts[item.id] = likesForPost.length
-    })
-
-    setLikeCount(postLikeCounts)
-  }, [allFavorites, allItems, item.id])
+  //   setLikeCount(postLikeCounts)
+  // }, [allFavorites, allItems, item.id])
 
   
   const itemCategory = allCategories
@@ -84,17 +84,31 @@ export const CreateItemDetails = ({ item, currentUser }) => {
 
 
 
-  if (!item || !item.title) {
-    return <div>Loading...</div>;
-  }
+        if (!item || !item.title) {
+          return null;
+        }
+
+
+        const hasImages = item.images.some((image) => !!image);
+
+        if (!hasImages) {
+          return null;
+        }
+
 
   return (
     <div className="post-details">
       <div className="imageBox">
-        <img src={item.images[1]} alt="item detail" className="image_Display" />
-        <img src={item.images[2]} alt="item detail" className="image_Display" />
-        <img src={item.images[3]} alt="item detail" className="image_Display" />
-      </div>
+  {item.images[1] && (
+    <img src={item.images[1]} alt="no upload yet" className="image_Display" />
+  )}
+  {item.images[2] && (
+    <img src={item.images[2]} alt="no upload yet" className="image_Display" />
+  )}
+  {item.images[3] && (
+    <img src={item.images[3]} alt="no upload yet" className="image_Display" />
+  )}
+</div>
       <div className="item-details-info-box">
         <h2>${item.price}</h2>
         <h1>{item.title}</h1>
@@ -113,10 +127,10 @@ export const CreateItemDetails = ({ item, currentUser }) => {
       </div>
 
 
-
-          <div key={item.id}>
+{/* /////////Display a Like Count ///////////////////////////////////////////////////////// */}
+          {/* <div key={item.id}>
             Likes: {likeCount[item.id] || 0}
-          </div>
+          </div> */}
 
 
 

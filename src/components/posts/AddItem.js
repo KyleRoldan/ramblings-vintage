@@ -158,17 +158,17 @@ export const AddItem = ({ currentUser }) => {
           value={newInput}
           onChange={(e) => setNewInput(e.target.value)}
         />
-        <button class="classic-button" onClick={addNewInput}>Add New Image</button>
+        <button className="classic-button" onClick={addNewInput}>Add New Image</button>
 
         {newInputs.map((input, index) => (
           <div key={index}>
             <img className="form-Image" alt="input" src={input}/>
-            <button class="classic-button" onClick={() => removeNewInput(index)}>Remove</button>
+            <button className="classic-button" onClick={() => removeNewInput(index)}>Remove</button>
           </div>
         ))}
       
       <h1>Add Item to Listings</h1>
-      <Link to={`/items`}><button class="classic-button" onClick={() => {
+      <Link to={`/items`}><button className="classic-button" onClick={() => {
         handleItemSave()
 
 
