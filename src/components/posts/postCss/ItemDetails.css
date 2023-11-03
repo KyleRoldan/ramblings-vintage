@@ -10,6 +10,7 @@
     margin: 48px 8px 24px 0;
 }  
 
+<<<<<<< HEAD
 .imageBox_Extra{
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +26,8 @@ width: 640px;
 
 }
 
+=======
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 .item-details-info-box{
     padding: 0 22px 0 30px;
 }
@@ -37,6 +40,7 @@ width: 640px;
     opacity: 50%;
 }
 
+<<<<<<< HEAD
 .etsy_button{
     background-color: transparent;
 border: none;
@@ -75,3 +79,5 @@ margin-left: 15px;
 
 }
 
+=======
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927

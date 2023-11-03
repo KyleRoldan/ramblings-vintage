@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import { getAllItems, getAllFavorites, getAllCategories, getListOfFavorites } from "../../services/FetchCalls";
 import { Link } from "react-router-dom"
 import ".//postCss/AllItems.css"
+<<<<<<< HEAD
 import sort from "../../assets/sort.png"
 import magnifyglass from "../../assets/magnifyglass.png"
 import unSort from "../../assets/unSort.png"
 
+=======
+import testImg from "../../assets/testImg.jpg"
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 
@@ -24,8 +28,11 @@ export const Favorites = ({currentUser}) => {
     const [filteredItems, setFilteredItems] = useState([])
     const [selectedCategory, setSelectedCategory] = useState(0);
     const [itemsFavoritedByCurrentUser,setItemsFavoritedByCurrentUser] = useState([])
+<<<<<<< HEAD
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isDropdownOpenSecondary, setIsDropdownOpenSecondary] = useState(false);
+=======
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
     useEffect(() => {
         getListOfFavorites().then((listFavoritesArray) => {
@@ -133,11 +140,16 @@ export const Favorites = ({currentUser}) => {
 
     /////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
    
+=======
+    return <>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
     
 
 
+<<<<<<< HEAD
 return <>
 
 
@@ -253,6 +265,31 @@ return <>
         
       </div>
     </div>
+=======
+        <select
+            value={selectedCategory}
+            onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
+        >
+            <option value="All">All</option>
+            {allCategories.map((itemOption) => (
+                <option key={itemOption.id} value={itemOption.id}>
+                    {itemOption.name}
+                </option>
+            ))}
+        </select>
+
+        <input
+            onChange={(event) => { setSearchTerm(event.target.value) }}
+            type="text"
+            placeholder="search title"
+            className="title-search"
+        />
+
+
+
+     <h1>MY FAVORITES</h1>
+
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
      <div className="image-container_whole">
         {filteredItems.map((item) => (

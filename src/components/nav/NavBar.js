@@ -42,8 +42,12 @@ export const NavBar = ({currentUser}) => {
         
         <div className="userSection">
             <div className="userProfilePic-box">
+<<<<<<< HEAD
                 {/* <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/> */}
                 Hey,
+=======
+                <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
             </div>
         <div className="userBox"> {userEmail} </div>
        </div>
@@ -59,6 +63,7 @@ export const NavBar = ({currentUser}) => {
         {isDropdownOpen && (
           <div className="dropdown-content">
 
+<<<<<<< HEAD
             <Link className='link-tag' to="/items">
             <div className="dropdown-item" onClick={() => handleServiceClick(1)}>
             H
@@ -78,6 +83,14 @@ export const NavBar = ({currentUser}) => {
             e
             m
             s</div>
+=======
+            <Link to="/items">
+            <div className="dropdown-item" onClick={() => handleServiceClick(1)}>Home</div>
+            </Link>
+
+            <Link to="/addItem">
+            <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Add Items</div>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
             </Link>
 
            
@@ -98,8 +111,13 @@ export const NavBar = ({currentUser}) => {
 
 
 {localStorage.getItem("ramblings_user") ? (
+<<<<<<< HEAD
     <Link 
       className='link-tag'
+=======
+    <Link
+      className="navbar-link"
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       to=""
       onClick={() => {
         localStorage.removeItem("ramblings_user")
@@ -107,12 +125,16 @@ export const NavBar = ({currentUser}) => {
       }}
     >
       <div className="dropdown-item">
+<<<<<<< HEAD
       L
       o
       g
       o
       u
       t
+=======
+      Logout
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       </div>
     </Link>
 ) : (

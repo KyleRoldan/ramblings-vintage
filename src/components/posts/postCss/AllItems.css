@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*//////////////////HOVER CARD OPTION//////////////////////////////////////*/
 
 .image-container_whole {
@@ -6,10 +7,24 @@
   flex-wrap: wrap;
   margin:0px 0px 0px 50px;
   padding: 30px 50px 50px 50px;
+=======
+
+
+/*//////////////////HOVER CARD OPTION//////////////////////////////////////*/
+
+.image-container_whole{
+
+display: flex;
+flex-wrap: wrap;
+margin-left: 50px;
+
+padding: 50px;
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 }
 
 .image-container {
+<<<<<<< HEAD
   display: flex;
 
   margin: 4px;
@@ -158,15 +173,155 @@ width:300px;
 text-align: center;
  font-style: italic;  
 }
+=======
+    display:flex;
+   
+    margin: 4px;
+    position: relative;
+    width: 300px; /* Set the width of your image container */
+    overflow:hidden;
+   
+  }
+  
+  img {
+    width: 100%;
+   transition: filter .5s; /* Add a transition for the blur effect */
+  }
+  
+  .overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background: rgba(229, 226, 226, 0.418); /* Overlay background color and opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    opacity: 0; /* Start with the overlay hidden */
+    transition: opacity 0.5s; /* Add a transition for the fade-in effect */
+    text-decoration: none;
+    text-align: center;
+    color: #fffef2;
+  }
+
+  
+  
+  .image-container:hover img {
+    filter: blur(5px); /* Apply the blur effect on hover */
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+  }
+
+  .searchSort-container{
+   display: flex;
+   /* border: 2px dotted black; */
+   
+   
+   
+   justify-content: flex-end;
+  
+
+    
+    background: transparent;
+    width: 95%;
+    justify-self: center;
+   
+   
+  }
+
+  .searchSort-container:hover{
+    cursor: pointer;
+
+  }
+
+  .category-search-input{
+    border:black dotted 1px;
+
+  }
+  .title-search-input{
+    border: solid 2px 2.5px 2px 2.5px black;
+    margin:0px 20px 0px 20px;
+    padding:2px;
+    border-radius:35px;
+    background: transparent;
+    text-align: center;
+   
+    
+
+   
+   
+    
+  }
+
+  .sort-box {
+    background-color: #fffef2;
+  }
+
+  .category-search-input {
+    margin: 5px;
+    background-color: #fffef2;
+    width: 100px;
+    border-radius:35px;
+    border: 2px solid black;
+    outline: 2px black black;
+    padding:4px 4px;
+    
+  }
+
+
+  .dropdown {
+   /* border:2px dotted black; */
+    
+  }
+
+  .dropdown-secondary {
+    width: 100px;
+    border:2px dotted orange;
+    border-radius: 35px;
+    margin: 0px 20px 0px 0px;
+     
+   }
+
+
+  .dropdown-options {
+  display: flex;
+  flex-direction: row;
+
+  }
+
+  .dropdown-option {
+    
+    
+    border: none;
+    background-color: transparent;
+  }
+.whole-container{
+  display: flex;
+justify-content: center;
+ 
+}
+ 
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
 /* ///ITEM CARD STYLLED IN RELATION TO WIREFRAME PROPOSAL////////////////////////////
+=======
+  
+  
+  
+  /* ///ITEM CARD STYLLED IN RELATION TO WIREFRAME PROPOSAL////////////////////////////
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 .item_body {

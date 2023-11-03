@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import { getAllItems, getAllFavorites, getAllCategories } from "../../services/FetchCalls";
 import { Link } from "react-router-dom"
 import ".//postCss/AllItems.css"
+<<<<<<< HEAD
 import magnifyglass from "../../assets/magnifyglass.png"
 import sort from "../../assets/sort.png"
 import unSort from "../../assets/unSort.png"
 
+=======
+import testImg from "../../assets/testImg.jpg"
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 export const AllItems = ({ currentUser }) => {
@@ -124,10 +128,21 @@ export const AllItems = ({ currentUser }) => {
             </div> */}
             <div
                 className="dropdown"
+<<<<<<< HEAD
                 src={magnifyglass}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)} // You'll need a state variable like isDropdownOpen to control the dropdown's visibility
             >
                  <img className= "magnifyglass" src={magnifyglass} alt="search button" />
+=======
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)} // You'll need a state variable like isDropdownOpen to control the dropdown's visibility
+            >
+                S
+                e
+                a
+                r
+                c
+                h
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
             </div>
 
             {isDropdownOpen && (
@@ -141,7 +156,11 @@ export const AllItems = ({ currentUser }) => {
                     />
 
 
+<<<<<<< HEAD
 {/* <div className="sort-box">
+=======
+<div className="sort-box">
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
                 <select
                     className="category-search-input"
                     value={selectedCategory}
@@ -154,6 +173,7 @@ export const AllItems = ({ currentUser }) => {
                         </option>
                     ))}
                 </select>
+<<<<<<< HEAD
             </div>  */}
 
                     <div
@@ -161,6 +181,15 @@ export const AllItems = ({ currentUser }) => {
                         className="dropdown-secondary"
                         onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
                     ><img className= "arrow" src={isDropdownOpenSecondary ? unSort : sort} alt="arrow" /></div>
+=======
+            </div> 
+
+                    {/* <div
+                        
+                        className="dropdown-secondary"
+                        onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
+                    >Categories</div>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
                     {isDropdownOpenSecondary && (
                     <div>
                     {allCategories.map((itemOption) => (
@@ -172,10 +201,17 @@ export const AllItems = ({ currentUser }) => {
                             onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
                         >
                             {itemOption.name}
+<<<<<<< HEAD
                         </button>                  
                     ))}
                 </div>
                     )}
+=======
+                        </button>
+                    ))}
+                </div>
+                    )} */}
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
                 </div>
             )}
 

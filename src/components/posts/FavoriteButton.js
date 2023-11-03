@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { deleteFavorite, getFavoriteRelationship } from '../../services/FetchCalls';
+<<<<<<< HEAD
 import favoritetab from "../../assets/favoritetab.png"
 import favoritetabfilled from "../../assets/favoritetabfilled.png"
+=======
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
   const [alreadyFavorited, setAlreadyFavorited] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
+<<<<<<< HEAD
   const [test, setTest] = useState([])
 
+=======
+  const [test,setTest] = useState([])
+  
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 
@@ -31,8 +39,13 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
       });
   }, [itemId, userId, alreadyFavorited.length]);
 
+<<<<<<< HEAD
 
 
+=======
+  
+  
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
   const handleFavorite = () => {
     fetch("http://localhost:8088/favorite", {
@@ -53,15 +66,22 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
   };
 
 
+<<<<<<< HEAD
   const handleUnfavorite = () => {
     deleteFavorite(test[0].id)
     setIsFavorite(false)
+=======
+    const handleUnfavorite = () => {
+      deleteFavorite(test[0].id)
+      setIsFavorite(false)
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
   };
 
 
   return (
     <div>
       {isFavorite ? (
+<<<<<<< HEAD
         <button className="favoritetab" onClick={handleUnfavorite}>
           <img className="" src={favoritetabfilled} alt="favorite Button" />
 
@@ -69,6 +89,14 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
       ) : (
         <button className="favoritetab" onClick={handleFavorite}>
           <img className="" src={favoritetab} alt="favorite Button" />
+=======
+        <button className="classic-button" onClick={handleUnfavorite}>
+          Unlike
+        </button>
+      ) : (
+        <button className="classic-button" onClick={handleFavorite}>
+          Favorite
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
         </button>
       )}
     </div>

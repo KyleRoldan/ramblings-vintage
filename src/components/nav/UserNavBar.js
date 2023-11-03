@@ -41,8 +41,12 @@ export const UserNavBar = ({currentUser}) => {
         
         <div className="userSection">
             <div className="userProfilePic-box">
+<<<<<<< HEAD
                 {/* <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/> */}
                 Welcome back,
+=======
+                <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
             </div>
         <div className="userBox"> {userEmail} </div>
        </div>
@@ -58,6 +62,7 @@ export const UserNavBar = ({currentUser}) => {
         {isDropdownOpen && (
           <div className="dropdown-content">
 
+<<<<<<< HEAD
             <Link className='link-tag' to="/items">
             <div className="dropdown-item" onClick={() => handleServiceClick(1)}>
             H
@@ -90,11 +95,28 @@ export const UserNavBar = ({currentUser}) => {
               t
               </div>
             </Link> 
+=======
+            <Link to="/items">
+            <div className="dropdown-item" onClick={() => handleServiceClick(1)}>Home</div>
+            </Link>
+
+            <Link to="/favorites">
+            <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Favorites</div>
+            </Link>
+
+            <Link to="/lists">
+            <div className="dropdown-item" onClick={() => handleServiceClick(3)}>Curated List</div>
+            </Link>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 {localStorage.getItem("ramblings_user") ? (
     <Link
+<<<<<<< HEAD
       className="link-tag"
+=======
+      className="navbar-link"
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       to=""
       onClick={() => {
         localStorage.removeItem("ramblings_user")
@@ -102,12 +124,16 @@ export const UserNavBar = ({currentUser}) => {
       }}
     >
       <div className="dropdown-item">
+<<<<<<< HEAD
       L
       o
       g
       o
       u
       t
+=======
+      Logout
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       </div>
     </Link>
 ) : (

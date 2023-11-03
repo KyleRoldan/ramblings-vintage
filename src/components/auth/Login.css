@@ -1,4 +1,5 @@
 .auth-container{
+<<<<<<< HEAD
 border:solid 2px black;
 box-shadow: 20px 20px  rgba(250, 78, 18, 1);
 width:40%;
@@ -7,6 +8,16 @@ flex-direction: column;
 align-items: center;
 margin: 80px 0px 100px 750px;
 padding: 10px;
+=======
+border:solid 2px rgba(250, 78, 18, 1);
+border-radius: 25px;
+box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+width:33%;
+display:flex;
+flex-direction: column;
+align-items: center;
+margin: 100px auto 0;
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 }
 
@@ -18,10 +29,14 @@ padding: 10px;
 
 .log-in-text{
     /* border: dotted 2px black; */
+<<<<<<< HEAD
     margin: 15% 0% 10% 0%;
     font-size: 38px;
     letter-spacing: 2px;
     font-weight: bolder;
+=======
+    margin: 15% 0% 10% 0%
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 }
 .newUser-box{
 
@@ -43,12 +58,20 @@ padding: 10px;
 
 .auth-form-input{
     width:100%;
+<<<<<<< HEAD
     padding: 20px;
+=======
+    padding: 10px;
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
     text-align: center; 
     vertical-align: middle;
     margin-bottom: 15px;
     background-color: rgba(255, 254, 242, 1);
+<<<<<<< HEAD
     letter-spacing: 1px;
+=======
+    border-radius: 5px;
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 }
 

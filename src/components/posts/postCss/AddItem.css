@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .addItemPage {
     display: flex;
     flex-direction: row-reverse;
@@ -142,3 +143,8 @@ input[type=email]:focus {
 
 
 } */
+=======
+.form-Image {
+    max-width: 100px;
+}
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927

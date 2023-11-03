@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom"
 import "./Welcome.css"
 
@@ -55,5 +56,21 @@ export const Welcome = () => {
             </div>
         </div>
     </>)
+=======
+import "./Welcome.css"
+
+export const Welcome = () => {
+ 
+    
+ 
+ return ( <> 
+    <div className = "body">
+<div className="welcome-container">
+
+
+</div>
+</div>
+ </>)
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 }

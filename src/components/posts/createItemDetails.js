@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { getAllCategories, getAllUsers, getAllFavorites, getAllItems, assignLike, updateLike, getFavoritedItems, deleteLike } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
 import { FavoriteButton } from "./FavoriteButton";
+<<<<<<< HEAD
 import etsyButton from "../../assets/EtsyLogo.png"
+=======
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 
@@ -111,6 +114,7 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   )}
 </div>
       <div className="item-details-info-box">
+<<<<<<< HEAD
 
         <div className = "item-details-etsy">
           
@@ -124,11 +128,23 @@ export const CreateItemDetails = ({ item, currentUser }) => {
 
 
         <FavoriteButton        
+=======
+        <h2>${item.price}</h2>
+        <h1>{item.title}</h1>
+        <p className="opaque-text">{itemCategory}</p>
+        <p className="item-description">{item.description}</p>
+        <div>
+
+        <div>
+        <FavoriteButton
+         
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
          itemId= {itemId} 
          userId={userId}
          isFavorite={isFavorite}
         onFavoriteChange={handleFavoriteChange}
         />
+<<<<<<< HEAD
         </div>
         
         </div>
@@ -148,6 +164,9 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   )}
 </div>
       
+=======
+      </div>
+>>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 {/* /////////Display a Like Count ///////////////////////////////////////////////////////// */}
