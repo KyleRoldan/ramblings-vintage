@@ -4,11 +4,7 @@ import { Welcome } from "../components/welcome/Welcome"
 import { AllItems } from "../components/posts/AllItems"
 import { ItemDetails } from "../components/posts/Itemdetails"
 import { Favorites } from "../components/posts/Favorites"
-<<<<<<< HEAD
 import { AllLists } from "../components/posts/About"
-=======
-import { AllLists } from "../components/posts/AllLists"
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 import { AddItem } from "../components/posts/AddItem"
 import { EditItem } from "../components/posts/EditItem"
 

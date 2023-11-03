@@ -4,11 +4,7 @@ import { Welcome } from "../components/welcome/Welcome"
 import { useEffect, useState } from "react"
 import { AddItem } from "../components/posts/AddItem"
 import { AllItems } from "../components/posts/AllItems"
-<<<<<<< HEAD
 import { AllLists } from "../components/posts/About"
-=======
-import { AllLists } from "../components/posts/AllLists"
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 import { EditItem } from "../components/posts/EditItem"
 import { EditList } from "../components/posts/EditList"
 import { Favorites } from "../components/posts/Favorites"

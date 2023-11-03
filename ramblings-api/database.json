@@ -2,32 +2,15 @@
   "user": [
     {
       "fullName": "Admin",
-<<<<<<< HEAD
       "email": "admin@gmail.com",
-=======
-      "email": "Admin@gmail.com",
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       "isAdmin": true,
       "id": 1
     },
     {
-<<<<<<< HEAD
-      "fullName": "User",
-      "email": "user@gmail.com",
-      "isAdmin": false,
-      "id": 2
-    },
-    {
-      "fullName": "Kyle Roldan",
-      "email": "kyle.alexander.roldan@gmail.com",
-      "isAdmin": true,
-      "id": 3
-=======
       "fullName": "user 2",
       "email": "user@gmail.com",
       "isAdmin": false,
       "id": 2
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
     }
   ],
   "item": [
@@ -383,7 +366,6 @@
         "https://i.etsystatic.com/16189360/r/il/0782f4/4922681809/il_fullxfull.4922681809_oje5.jpg",
         "https://i.etsystatic.com/16189360/r/il/9b8a48/4922681969/il_fullxfull.4922681969_bbk1.jpg"
       ]
-<<<<<<< HEAD
     },
     {
       "title": "lkvnlknvd",
@@ -395,8 +377,6 @@
         "https://i.etsystatic.com/16189360/r/il/9d502a/4888080148/il_fullxfull.4888080148_5gan.jpg"
       ],
       "id": 23
-=======
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
     }
   ],
   "category": [
@@ -455,11 +435,6 @@
   ],
   "favorite": [
     {
-<<<<<<< HEAD
-      "itemId": 4,
-      "userId": 2,
-      "id": 1
-=======
       "itemId": 1,
       "userId": 3,
       "id": 4
@@ -548,7 +523,6 @@
       "itemId": 12,
       "userId": 2,
       "id": 23
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
     }
   ],
   "user_list_item": [

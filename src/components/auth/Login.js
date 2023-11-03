@@ -34,11 +34,7 @@ export const Login = () => {
   return (
     <div className="auth-container">
 
-<<<<<<< HEAD
-      <div className="log-in-text">Log in</div>
-=======
       <div className="log-in-text">Log-in</div>
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       
       <div className= "secondary-conatiner">
         <form className="auth-form" onSubmit={handleLogin}>
@@ -59,11 +55,7 @@ export const Login = () => {
            
            <div className="auth-fieldset">
             <div>
-<<<<<<< HEAD
-              <button className="classic-button" type="submit">Sign In</button>
-=======
               <button class="classic-button" type="submit">Sign In</button>
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
             </div>
           </div>
         
@@ -72,11 +64,7 @@ export const Login = () => {
       <div className="newUser-box">New user?</div>
       
       <div className="register-link">
-<<<<<<< HEAD
-        <Link to="/register"><button className="classic-button" type="submit">Join Now</button></Link>
-=======
         <Link to="/register"><button class="classic-button" type="submit">Join Now</button></Link>
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       </div>
 
     </div>

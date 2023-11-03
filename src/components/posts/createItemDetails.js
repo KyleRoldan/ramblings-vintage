@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import { getAllCategories, getAllUsers, getAllFavorites, getAllItems, assignLike, updateLike, getFavoritedItems, deleteLike } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
 import { FavoriteButton } from "./FavoriteButton";
-<<<<<<< HEAD
-import etsyButton from "../../assets/EtsyLogo.png"
-=======
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 
@@ -114,7 +110,6 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   )}
 </div>
       <div className="item-details-info-box">
-<<<<<<< HEAD
 
         <div className = "item-details-etsy">
           
@@ -123,50 +118,17 @@ export const CreateItemDetails = ({ item, currentUser }) => {
 
         <div className="buying-favorite-box">
   <a href="https://www.etsy.com/shop/ramblingsvintageshop" target="_blank" rel="noreferrer" className="etsy_button">
-    <img className="etsy_logo" src={etsyButton} alt="Etsy Button" />
+    <img className="etsy_logo" src="" alt="Etsy Button" />
   </a>
 
 
         <FavoriteButton        
-=======
-        <h2>${item.price}</h2>
-        <h1>{item.title}</h1>
-        <p className="opaque-text">{itemCategory}</p>
-        <p className="item-description">{item.description}</p>
-        <div>
-
-        <div>
-        <FavoriteButton
-         
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
          itemId= {itemId} 
          userId={userId}
          isFavorite={isFavorite}
         onFavoriteChange={handleFavoriteChange}
         />
-<<<<<<< HEAD
-        </div>
-        
-        </div>
-
-
-        <h1>{item.title}</h1>
-        <p className="opaque-text">{itemCategory}</p>
-        <p className="item-description">{item.description}</p>
-        <div> 
-
-        <div className="imageBox_Extra">
-  {item.images[4] && (
-    <img src={item.images[1]} alt="no upload yet" className="image_Display_Extra" />
-  )}
-  {item.images[5] && (
-    <img src={item.images[2]} alt="no upload yet" className="image_Display_Extra" />
-  )}
-</div>
-      
-=======
       </div>
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
 
 
 {/* /////////Display a Like Count ///////////////////////////////////////////////////////// */}

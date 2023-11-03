@@ -56,21 +56,11 @@ useEffect(() => {
       }
    
   }
-<<<<<<< HEAD
-
-  const hasImages = item.images.some((image) => !!image);
-
-        if (!hasImages) {
-          return null;
-        }
-=======
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
   
 
   return (
     <div className="post-details">
       <div className="imageBox">
-<<<<<<< HEAD
       {item.images[1] && (
     <img src={item.images[1]} alt="no upload yet" className="image_Display" />
   )}
@@ -80,11 +70,6 @@ useEffect(() => {
        {item.images[3] && (
     <img src={item.images[3]} alt="no upload yet" className="image_Display" />
   )}
-=======
-        <img src={item.images[1]} alt="item detail" className="image_Display" />
-        <img src={item.images[2]} alt="item detail" className="image_Display" />
-        <img src={item.images[3]} alt="item detail" className="image_Display" />
->>>>>>> 92724c619b302066aa0b0fe537d329344da44927
       </div>
       <div className="item-details-info-box">
         <h2>${item.price}</h2>
