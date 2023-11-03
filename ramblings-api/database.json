@@ -15,48 +15,8 @@
   ],
   "item": [
     {
-      "id": 1,
-      "categoryId": 2,
-      "title": "Vintage 70s/80s L.L. Bean Denim Overalls sz 32/32 Made in USA",
-      "description": "waist: 16.5 in\ninseam: 32 in",
-      "measurements": {
-        "waist": "16.5 in",
-        "inseam": "32 in"
-      },
-      "price": 225,
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/761950/5073451295/il_fullxfull.5073451295_hvmh.jpg",
-        "https://i.etsystatic.com/16189360/r/il/859029/5025226674/il_fullxfull.5025226674_dvu6.jpg",
-        "https://i.etsystatic.com/16189360/r/il/67896d/5025226848/il_fullxfull.5025226848_z10l.jpg",
-        "https://i.etsystatic.com/16189360/r/il/a630de/5073451881/il_fullxfull.5073451881_45h1.jpg",
-        "https://i.etsystatic.com/16189360/r/il/b9e91c/5073452093/il_fullxfull.5073452093_330l.jpg",
-        "https://i.etsystatic.com/16189360/r/il/1db640/5073452249/il_fullxfull.5073452249_t16d.jpg",
-        "https://i.etsystatic.com/16189360/r/il/4f473e/5025227784/il_fullxfull.5025227784_579t.jpg",
-        "https://i.etsystatic.com/16189360/r/il/63deda/5025227920/il_fullxfull.5025227920_ehxu.jpg",
-        "https://i.etsystatic.com/16189360/r/il/077c26/5073452941/il_fullxfull.5073452941_4y6y.jpg"
-      ]
-    },
-    {
-      "id": 2,
-      "categoryId": 13,
-      "title": "Vintage 80s Gym Bag MLB New York Mets",
-      "description": "please message if you have any questions regarding size or condition\napprox ~ 14 in x 10 in",
-      "measurements": {
-        "approxSize": "~ 14 in x 10 in"
-      },
-      "price": "55",
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/c3a1f6/4888038292/il_fullxfull.4888038292_huqe.jpg",
-        "https://i.etsystatic.com/16189360/r/il/17b208/4888036028/il_fullxfull.4888036028_q5fr.jpg"
-      ]
-    },
-    {
       "id": 3,
-      "categoryId": 8,
+      "categoryId": "7",
       "title": "Vintage Madewell Flannel shirt sz XL",
       "description": "please message if you have any questions regarding size or condition\n* has been cropped",
       "measurements": {},
@@ -259,7 +219,7 @@
         "waist": "15.5 in",
         "inseam": "29.5 in"
       },
-      "price": 85,
+      "price": "10000000000",
       "currency": "USD",
       "quantity": 1,
       "images": [
@@ -542,6 +502,16 @@
       "itemId": 10,
       "userId": 2,
       "id": 21
+    },
+    {
+      "itemId": 3,
+      "userId": 2,
+      "id": 22
+    },
+    {
+      "itemId": 12,
+      "userId": 2,
+      "id": 23
     }
   ],
   "user_list_item": [

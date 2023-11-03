@@ -24,8 +24,8 @@ export const UserNavBar = ({currentUser}) => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleServiceClick = (serviceNumber) => {
-    alert(`You clicked Service ${serviceNumber}`);
+  const handleServiceClick = () => {
+    
     
     // Optionally, you can close the dropdown by setting isDropdownOpen to false
     setIsDropdownOpen(false);

@@ -24,8 +24,8 @@ export const NavBar = ({currentUser}) => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleServiceClick = (serviceNumber) => {
-    alert(`You clicked Service ${serviceNumber}`);
+  const handleServiceClick = () => {
+    
     
     // Optionally, you can close the dropdown by setting isDropdownOpen to false
     setIsDropdownOpen(false);
@@ -35,7 +35,7 @@ export const NavBar = ({currentUser}) => {
   .filter((user) => user.id === currentUser.id)
   .map((user )=> user.fullName)
 
-  console.log(userEmail)
+  
 
   return (
     <div className="navbar">

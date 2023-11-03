@@ -13,6 +13,8 @@ export const AllItems = ({ currentUser }) => {
     const [searchTerm, setSearchTerm] = useState("")
     const [filteredItems, setFilteredItems] = useState([])
     const [selectedCategory, setSelectedCategory] = useState(0);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpenSecondary, setIsDropdownOpenSecondary] = useState(false);
 
 
     useEffect(() => {
@@ -33,6 +35,8 @@ export const AllItems = ({ currentUser }) => {
             setAllCategories(categoryArray)
         })
     }, [])
+
+
 
 
     ///////////////////////Categories/////////////////////////////////////
@@ -61,14 +65,14 @@ export const AllItems = ({ currentUser }) => {
             if (isNaN(selectedCategory) || selectedCategory === "All" || selectedCategory === 0) {
                 // Show all items
                 return item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase());
-            
+
             }
 
             // Check if the selectedCategory matches the item's category
             if (selectedCategory === item.categoryId) {
                 // Check if the item's title includes the search term (case-insensitive)
                 return item.title && item.title.toLowerCase().includes(searchTerm.toLowerCase());
-        
+
             }
 
             return false; // Filter out items that don't match the criteria.
@@ -78,32 +82,115 @@ export const AllItems = ({ currentUser }) => {
         setFilteredItems(foundItems);
     }, [selectedCategory, searchTerm, allItems]);
 
-    
+
+
 
     /////////////////////////////////////////////////////////////////
 
     return <>
 
 
-        <select
-            value={selectedCategory}
-            onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
-        >
-            <option value="All">All</option>
-            {allCategories.map((itemOption) => (
-                <option key={itemOption.id} value={itemOption.id}>
-                    {itemOption.name}
-                </option>
-            ))}
-        </select>
+<div className="whole-container">
 
-        <input
-            onChange={(event) => { setSearchTerm(event.target.value) }}
-            type="text"
-            placeholder="search title"
-            className="title-search"
-        />
+        <div className="searchSort-container">
+            {/* <div className="search-Box">
+                <input
+                    onChange={(event) => { setSearchTerm(event.target.value) }}
+                    type="text"
+                    // placeholder="search title"
+                    className="title-search-input"
+                />
 
+            </div> */}
+
+
+
+            {/* <div className="sort-box">
+                <select
+                    className="category-search-input"
+                    value={selectedCategory}
+                    onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
+                >
+                    <option className="dropdown" value="All">All</option>
+                    {allCategories.map((itemOption) => (
+                        <option className="dropdown-option" key={itemOption.id} value={itemOption.id}>
+                            {itemOption.name}
+                        </option>
+                    ))}
+                </select>
+            </div> */}
+            <div
+                className="dropdown"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)} // You'll need a state variable like isDropdownOpen to control the dropdown's visibility
+            >
+                S
+                e
+                a
+                r
+                c
+                h
+            </div>
+
+            {isDropdownOpen && (
+                <div className="dropdown-options">
+
+                    <input
+                        onChange={(event) => { setSearchTerm(event.target.value) }}
+                        type="text"
+                        // placeholder="search title"
+                        className="title-search-input"
+                    />
+
+
+<div className="sort-box">
+                <select
+                    className="category-search-input"
+                    value={selectedCategory}
+                    onChange={(event) => setSelectedCategory(parseInt(event.target.value))}
+                >
+                    <option className="dropdown" value="All">All</option>
+                    {allCategories.map((itemOption) => (
+                        <option className="dropdown-option" key={itemOption.id} value={itemOption.id}>
+                            {itemOption.name}
+                        </option>
+                    ))}
+                </select>
+            </div> 
+
+                    {/* <div
+                        
+                        className="dropdown-secondary"
+                        onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
+                    >Categories</div>
+                    {isDropdownOpenSecondary && (
+                    <div>
+                    {allCategories.map((itemOption) => (
+
+                        <button
+                            className="dropdown-option"
+                            key={itemOption.id}
+                            value={itemOption.id}
+                            onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
+                        >
+                            {itemOption.name}
+                        </button>
+                    ))}
+                </div>
+                    )} */}
+                </div>
+            )}
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
 
 
 
@@ -113,7 +200,7 @@ export const AllItems = ({ currentUser }) => {
             {filteredItems.map((item) => (
 
                 <div className="image-container" key={item.id}>
-                    <img src={item.images[0]}alt="jacket" />
+                    <img src={item.images[0]} alt="jacket" />
                     <div className="overlay">
                         <Link className="link_styling" to={`/items/${item.id}`}>{item.title}</Link>
                         <div>${item.price}</div>
@@ -121,16 +208,16 @@ export const AllItems = ({ currentUser }) => {
 
 
 
-                   
+
 
 
                 </div>
 
             ))}
-            
+
         </div>
 
-{/* ////////////ItEM CARD STYLED IN RELATION TO CAPSTONE WIREFRAM//////////////////////////////*/}
+        {/* ////////////ItEM CARD STYLED IN RELATION TO CAPSTONE WIREFRAM//////////////////////////////*/}
 
         {/* <div className="item_body">
 
